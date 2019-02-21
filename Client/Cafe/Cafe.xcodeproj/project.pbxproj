@@ -27,6 +27,16 @@
 		E9BE7C64221E3699007DA83B /* btn_backItem.png in Resources */ = {isa = PBXBuildFile; fileRef = E9BE7C63221E3699007DA83B /* btn_backItem.png */; };
 		E9BE7C67221E5670007DA83B /* background_home_searchBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9BE7C66221E566F007DA83B /* background_home_searchBar@2x.png */; };
 		E9BE7C69221E5726007DA83B /* login_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9BE7C68221E5726007DA83B /* login_button@2x.png */; };
+		E9BE7C75221E65BA007DA83B /* icon_tabbar_merchant_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9BE7C6F221E65B9007DA83B /* icon_tabbar_merchant_selected@2x.png */; };
+		E9BE7C76221E65BA007DA83B /* icon_tabbar_homepage_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9BE7C70221E65B9007DA83B /* icon_tabbar_homepage_selected@2x.png */; };
+		E9BE7C77221E65BA007DA83B /* icon_tabbar_mine_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9BE7C71221E65B9007DA83B /* icon_tabbar_mine_selected@2x.png */; };
+		E9BE7C78221E65BA007DA83B /* icon_tabbar_mine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9BE7C72221E65B9007DA83B /* icon_tabbar_mine@2x.png */; };
+		E9BE7C79221E65BA007DA83B /* icon_tabbar_merchant_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9BE7C73221E65BA007DA83B /* icon_tabbar_merchant_normal@2x.png */; };
+		E9BE7C7A221E65BA007DA83B /* icon_tabbar_homepage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9BE7C74221E65BA007DA83B /* icon_tabbar_homepage@2x.png */; };
+		E9BE7C7E221E6DB4007DA83B /* MyTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9BE7C7C221E6DB4007DA83B /* MyTabViewController.m */; };
+		E9BE7C7F221E6DB4007DA83B /* MyTabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9BE7C7D221E6DB4007DA83B /* MyTabViewController.xib */; };
+		E9BE7C83221E7066007DA83B /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9BE7C81221E7066007DA83B /* HomeViewController.m */; };
+		E9BE7C84221E7066007DA83B /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9BE7C82221E7066007DA83B /* HomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +65,18 @@
 		E9BE7C63221E3699007DA83B /* btn_backItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_backItem.png; sourceTree = "<group>"; };
 		E9BE7C66221E566F007DA83B /* background_home_searchBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background_home_searchBar@2x.png"; sourceTree = "<group>"; };
 		E9BE7C68221E5726007DA83B /* login_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_button@2x.png"; sourceTree = "<group>"; };
+		E9BE7C6F221E65B9007DA83B /* icon_tabbar_merchant_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_tabbar_merchant_selected@2x.png"; sourceTree = "<group>"; };
+		E9BE7C70221E65B9007DA83B /* icon_tabbar_homepage_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_tabbar_homepage_selected@2x.png"; sourceTree = "<group>"; };
+		E9BE7C71221E65B9007DA83B /* icon_tabbar_mine_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_tabbar_mine_selected@2x.png"; sourceTree = "<group>"; };
+		E9BE7C72221E65B9007DA83B /* icon_tabbar_mine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_tabbar_mine@2x.png"; sourceTree = "<group>"; };
+		E9BE7C73221E65BA007DA83B /* icon_tabbar_merchant_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_tabbar_merchant_normal@2x.png"; sourceTree = "<group>"; };
+		E9BE7C74221E65BA007DA83B /* icon_tabbar_homepage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_tabbar_homepage@2x.png"; sourceTree = "<group>"; };
+		E9BE7C7B221E6DB4007DA83B /* MyTabViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTabViewController.h; sourceTree = "<group>"; };
+		E9BE7C7C221E6DB4007DA83B /* MyTabViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTabViewController.m; sourceTree = "<group>"; };
+		E9BE7C7D221E6DB4007DA83B /* MyTabViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTabViewController.xib; sourceTree = "<group>"; };
+		E9BE7C80221E7066007DA83B /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		E9BE7C81221E7066007DA83B /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		E9BE7C82221E7066007DA83B /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		FD3219446BD0DC81A8F59E47 /* Pods-Cafe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cafe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cafe/Pods-Cafe.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,6 +148,12 @@
 				E9BE7C44221E2C03007DA83B /* LoginViewController.h */,
 				E9BE7C45221E2C03007DA83B /* LoginViewController.m */,
 				E9BE7C46221E2C03007DA83B /* LoginViewController.xib */,
+				E9BE7C7B221E6DB4007DA83B /* MyTabViewController.h */,
+				E9BE7C7C221E6DB4007DA83B /* MyTabViewController.m */,
+				E9BE7C7D221E6DB4007DA83B /* MyTabViewController.xib */,
+				E9BE7C80221E7066007DA83B /* HomeViewController.h */,
+				E9BE7C81221E7066007DA83B /* HomeViewController.m */,
+				E9BE7C82221E7066007DA83B /* HomeViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -143,6 +171,12 @@
 		E9BE7C4D221E3681007DA83B /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				E9BE7C70221E65B9007DA83B /* icon_tabbar_homepage_selected@2x.png */,
+				E9BE7C74221E65BA007DA83B /* icon_tabbar_homepage@2x.png */,
+				E9BE7C73221E65BA007DA83B /* icon_tabbar_merchant_normal@2x.png */,
+				E9BE7C6F221E65B9007DA83B /* icon_tabbar_merchant_selected@2x.png */,
+				E9BE7C71221E65B9007DA83B /* icon_tabbar_mine_selected@2x.png */,
+				E9BE7C72221E65B9007DA83B /* icon_tabbar_mine@2x.png */,
 				E9BE7C63221E3699007DA83B /* btn_backItem.png */,
 			);
 			path = Home;
@@ -235,20 +269,28 @@
 			files = (
 				E9BE7C5D221E3681007DA83B /* icon_tabbar_mine@2x.png in Resources */,
 				E9BE7C5E221E3681007DA83B /* icon_tabbar_mine_selected@2x.png in Resources */,
+				E9BE7C75221E65BA007DA83B /* icon_tabbar_merchant_selected@2x.png in Resources */,
 				E9BE7C60221E3681007DA83B /* icon_tabbar_onsite@2x.png in Resources */,
+				E9BE7C76221E65BA007DA83B /* icon_tabbar_homepage_selected@2x.png in Resources */,
+				E9BE7C7F221E6DB4007DA83B /* MyTabViewController.xib in Resources */,
 				E9BE7C67221E5670007DA83B /* background_home_searchBar@2x.png in Resources */,
 				E9BE7C69221E5726007DA83B /* login_button@2x.png in Resources */,
 				E9BE7C5A221E3681007DA83B /* icon_tabbar_homepage@2x.png in Resources */,
 				E9BE7C3A221E251D007DA83B /* LaunchScreen.storyboard in Resources */,
 				E9BE7C5C221E3681007DA83B /* icon_tabbar_onsite_selected@2x.png in Resources */,
 				E9BE7C5B221E3681007DA83B /* icon_tabbar_misc_selected@2x.png in Resources */,
+				E9BE7C7A221E65BA007DA83B /* icon_tabbar_homepage@2x.png in Resources */,
 				E9BE7C37221E251D007DA83B /* Assets.xcassets in Resources */,
 				E9BE7C64221E3699007DA83B /* btn_backItem.png in Resources */,
 				E9BE7C61221E3681007DA83B /* icon_tabbar_merchant_normal@2x.png in Resources */,
+				E9BE7C79221E65BA007DA83B /* icon_tabbar_merchant_normal@2x.png in Resources */,
 				E9BE7C62221E3681007DA83B /* icon_tabbar_misc@2x.png in Resources */,
+				E9BE7C78221E65BA007DA83B /* icon_tabbar_mine@2x.png in Resources */,
 				E9BE7C59221E3681007DA83B /* icon_tabbar_merchant_selected@2x.png in Resources */,
 				E9BE7C5F221E3681007DA83B /* icon_tabbar_homepage_selected@2x.png in Resources */,
+				E9BE7C77221E65BA007DA83B /* icon_tabbar_mine_selected@2x.png in Resources */,
 				E9BE7C48221E2C03007DA83B /* LoginViewController.xib in Resources */,
+				E9BE7C84221E7066007DA83B /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,8 +340,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9BE7C7E221E6DB4007DA83B /* MyTabViewController.m in Sources */,
 				E9BE7C3D221E251D007DA83B /* main.m in Sources */,
 				E9BE7C2F221E251C007DA83B /* AppDelegate.m in Sources */,
+				E9BE7C83221E7066007DA83B /* HomeViewController.m in Sources */,
 				E9BE7C47221E2C03007DA83B /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
