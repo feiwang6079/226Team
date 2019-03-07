@@ -31,42 +31,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    
     tabBarController = [[MyTabViewController alloc]  init];
-//
-//
-//    [tabBarController setTabBarItem:[UITabBarItem initWithTitle:@"Home" image:[UIImage imageNamed:@"icon_tabbar_merchant_normal.png"] selectedImage:[UIImage imageNamed:@"icon_tabbar_merchant_selected.png"]]];
-//       [tabBarController setTabBarItem:[UITabBarItem initWithTitle:@"Orders" image:[UIImage imageNamed:@"icon_tabbar_merchant_normal.png"] selectedImage:[UIImage imageNamed:@"icon_tabbar_merchant_selected.png"]]];
-//       [tabBarController setTabBarItem:[UITabBarItem initWithTitle:@"My" image:[UIImage imageNamed:@"icon_tabbar_merchant_normal.png"] selectedImage:[UIImage imageNamed:@"icon_tabbar_merchant_selected.png"]]];
-//
-//        HomeViewController *hvc1 = [[HomeViewController alloc] init];
-//        HomeViewController *hvc2 = [[HomeViewController alloc] init];
-//        HomeViewController *hvc3 = [[HomeViewController alloc] init];
-//        tabBarController.viewControllers = [NSArray arrayWithObjects:hvc1,hvc2,hvc3, nil];
-    
-//    UITabBar *tabBar =tabBarController.tabBar;
-//    UITabBarItem *tabBarItem1 = [tabBar.items objectAtIndex:0];
-//    UITabBarItem *tabBarItem2 = [tabBar.items objectAtIndex:1];
-//    UITabBarItem *tabBarItem3 = [tabBar.items objectAtIndex:2];
-//    tabBarItem1.title = @"Home";
-//    tabBarItem2.title = @"Orders";
-//    tabBarItem3.title = @"My";
-//    tabBarItem1.image = [UIImage imageNamed:@"icon_tabbar_merchant_normal.png"];
-////    tabBarItem1.selectedImage = [UIImage imageNamed:@"icon_tabbar_merchant_selected.png"];
-//    tabBarItem2.image = [UIImage imageNamed:@"icon_tabbar_merchant_normal.png"];
-//    tabBarItem2.selectedImage = [UIImage imageNamed:@"icon_tabbar_merchant_selected.png"];
-//    tabBarItem3.image = [UIImage imageNamed:@"icon_tabbar_merchant_normal.png"];
-//    tabBarItem3.selectedImage = [UIImage imageNamed:@"icon_tabbar_merchant_selected.png"];
-    
-//    tabBarItem1 = [UITabBar initWithTitle:@"Home" image:[UIImage imageNamed:@"icon_tabbar_merchant_normal.png"] selectedImage:[UIImage imageNamed:@"icon_tabbar_merchant_selected.png"]];
-//    tabBarItem2 = [UITabBar initWithTitle:@"Orders" image:[UIImage imageNamed:@"icon_tabbar_merchant_normal.png"] selectedImage:[UIImage imageNamed:@"icon_tabbar_merchant_selected.png"]];
-//    [tabBarItem3 initWithTitle:@"My" image:[UIImage imageNamed:@"icon_tabbar_merchant_normal.png"] selectedImage:[UIImage imageNamed:@"icon_tabbar_merchant_selected.png"]];
-    
-//    [tabBarItem1 setFinishedSelectedImage:[UIImage imageNamed:@"icon_tabbar_merchant_selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"icon_tabbar_merchant_normal.png"]];
-//    [tabBarItem2 setFinishedSelectedImage:[UIImage imageNamed:@"icon_tabbar_merchant_selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"icon_tabbar_merchant_normal.png"]];
-//    [tabBarItem3 setFinishedSelectedImage:[UIImage imageNamed:@"icon_tabbar_merchant_selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"icon_tabbar_merchant_normal.png"]];
-    
-    
     [self.window setRootViewController:tabBarController];
 
     

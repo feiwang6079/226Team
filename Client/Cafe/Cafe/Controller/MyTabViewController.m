@@ -22,12 +22,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    HomeViewController *hvc1 = [[HomeViewController alloc] init];
+    
+    HomeViewController *homeController = [[HomeViewController alloc] init];
+    UINavigationController *nv = [[UINavigationController alloc] initWithRootViewController:homeController];
+    
     HomeViewController *hvc2 = [[HomeViewController alloc] init];
     HomeViewController *hvc3 = [[HomeViewController alloc] init];
-    self.viewControllers = [NSArray arrayWithObjects:hvc1,hvc2,hvc3, nil];
+    self.viewControllers = [NSArray arrayWithObjects:nv,hvc2,hvc3, nil];
     
-    hvc1.title = @"Home";
     UITabBar *tabBar =self.tabBar;
     UITabBarItem *tabBarItem1 = [tabBar.items objectAtIndex:0];
     UITabBarItem *tabBarItem2 = [tabBar.items objectAtIndex:1];
@@ -40,7 +42,7 @@
     tabBarItem3.selectedImage = [[UIImage imageNamed:@"icon_tabbar_mine_selected@2x"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     tabBarItem3.image = [[UIImage imageNamed:@"icon_tabbar_mine"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
-//        tabBarItem1.title = @"Home";
+        tabBarItem1.title = @"Home";
         tabBarItem2.title = @"Orders";
         tabBarItem3.title = @"My";
     
