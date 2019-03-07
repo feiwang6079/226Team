@@ -5,8 +5,7 @@ public class Order {
     private double total_price;
     private String status;
 
-    public Order(long order_id, double total_price, String status) {
-        this.order_id = order_id;
+    public Order(double total_price, String status) {
         this.total_price = total_price;
         this.status = status;
     }
