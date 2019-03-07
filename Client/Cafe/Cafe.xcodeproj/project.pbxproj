@@ -35,6 +35,13 @@
 		E9F6C6F72230B04500F78CF3 /* DrinkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9F6C6F52230B04500F78CF3 /* DrinkTableViewCell.xib */; };
 		E9F6C6F92230B59100F78CF3 /* drink@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9F6C6F82230B59100F78CF3 /* drink@2x.png */; };
 		E9F6C6FF2230BFD300F78CF3 /* icon_homepage_map_selected_old.png in Resources */ = {isa = PBXBuildFile; fileRef = E9F6C6FE2230BFD300F78CF3 /* icon_homepage_map_selected_old.png */; };
+		E9F6C7032230C1B500F78CF3 /* SelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F6C7012230C1B500F78CF3 /* SelectViewController.m */; };
+		E9F6C7042230C1B500F78CF3 /* SelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9F6C7022230C1B500F78CF3 /* SelectViewController.xib */; };
+		E9F6C7062230C48400F78CF3 /* Topping.png in Resources */ = {isa = PBXBuildFile; fileRef = E9F6C7052230C48400F78CF3 /* Topping.png */; };
+		E9F6C70A2230C68700F78CF3 /* SelectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F6C7082230C68700F78CF3 /* SelectCell.m */; };
+		E9F6C70B2230C68700F78CF3 /* SelectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9F6C7092230C68700F78CF3 /* SelectCell.xib */; };
+		E9F6C70E2230C7F600F78CF3 /* WX20190306-193048@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9F6C70C2230C7F500F78CF3 /* WX20190306-193048@2x.png */; };
+		E9F6C70F2230C7F600F78CF3 /* WX20190306-193015@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9F6C70D2230C7F500F78CF3 /* WX20190306-193015@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +82,15 @@
 		E9F6C6F52230B04500F78CF3 /* DrinkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinkTableViewCell.xib; sourceTree = "<group>"; };
 		E9F6C6F82230B59100F78CF3 /* drink@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "drink@2x.png"; sourceTree = "<group>"; };
 		E9F6C6FE2230BFD300F78CF3 /* icon_homepage_map_selected_old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_homepage_map_selected_old.png; sourceTree = "<group>"; };
+		E9F6C7002230C1B500F78CF3 /* SelectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectViewController.h; sourceTree = "<group>"; };
+		E9F6C7012230C1B500F78CF3 /* SelectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectViewController.m; sourceTree = "<group>"; };
+		E9F6C7022230C1B500F78CF3 /* SelectViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectViewController.xib; sourceTree = "<group>"; };
+		E9F6C7052230C48400F78CF3 /* Topping.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Topping.png; sourceTree = "<group>"; };
+		E9F6C7072230C68700F78CF3 /* SelectCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectCell.h; sourceTree = "<group>"; };
+		E9F6C7082230C68700F78CF3 /* SelectCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectCell.m; sourceTree = "<group>"; };
+		E9F6C7092230C68700F78CF3 /* SelectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectCell.xib; sourceTree = "<group>"; };
+		E9F6C70C2230C7F500F78CF3 /* WX20190306-193048@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WX20190306-193048@2x.png"; sourceTree = "<group>"; };
+		E9F6C70D2230C7F500F78CF3 /* WX20190306-193015@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WX20190306-193015@2x.png"; sourceTree = "<group>"; };
 		FD3219446BD0DC81A8F59E47 /* Pods-Cafe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cafe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cafe/Pods-Cafe.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -168,6 +184,9 @@
 		E9BE7C4D221E3681007DA83B /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				E9F6C70D2230C7F500F78CF3 /* WX20190306-193015@2x.png */,
+				E9F6C70C2230C7F500F78CF3 /* WX20190306-193048@2x.png */,
+				E9F6C7052230C48400F78CF3 /* Topping.png */,
 				E9F6C6FE2230BFD300F78CF3 /* icon_homepage_map_selected_old.png */,
 				E9F6C6F82230B59100F78CF3 /* drink@2x.png */,
 				E9BE7C63221E3699007DA83B /* btn_backItem.png */,
@@ -218,6 +237,12 @@
 				E9F6C6F32230B04500F78CF3 /* DrinkTableViewCell.h */,
 				E9F6C6F42230B04500F78CF3 /* DrinkTableViewCell.m */,
 				E9F6C6F52230B04500F78CF3 /* DrinkTableViewCell.xib */,
+				E9F6C7002230C1B500F78CF3 /* SelectViewController.h */,
+				E9F6C7012230C1B500F78CF3 /* SelectViewController.m */,
+				E9F6C7022230C1B500F78CF3 /* SelectViewController.xib */,
+				E9F6C7072230C68700F78CF3 /* SelectCell.h */,
+				E9F6C7082230C68700F78CF3 /* SelectCell.m */,
+				E9F6C7092230C68700F78CF3 /* SelectCell.xib */,
 			);
 			path = Drinks;
 			sourceTree = "<group>";
@@ -281,14 +306,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9F6C7062230C48400F78CF3 /* Topping.png in Resources */,
 				E9BE7C5D221E3681007DA83B /* icon_tabbar_mine@2x.png in Resources */,
 				E9F6C6F92230B59100F78CF3 /* drink@2x.png in Resources */,
 				E9F6C6FF2230BFD300F78CF3 /* icon_homepage_map_selected_old.png in Resources */,
 				E9BE7C5E221E3681007DA83B /* icon_tabbar_mine_selected@2x.png in Resources */,
 				E9BE7C60221E3681007DA83B /* icon_tabbar_onsite@2x.png in Resources */,
 				E9F6C6F72230B04500F78CF3 /* DrinkTableViewCell.xib in Resources */,
+				E9F6C70B2230C68700F78CF3 /* SelectCell.xib in Resources */,
+				E9F6C7042230C1B500F78CF3 /* SelectViewController.xib in Resources */,
 				E9BE7C7F221E6DB4007DA83B /* MyTabViewController.xib in Resources */,
 				E9BE7C67221E5670007DA83B /* background_home_searchBar@2x.png in Resources */,
+				E9F6C70F2230C7F600F78CF3 /* WX20190306-193015@2x.png in Resources */,
 				E9BE7C69221E5726007DA83B /* login_button@2x.png in Resources */,
 				E9BE7C5A221E3681007DA83B /* icon_tabbar_homepage@2x.png in Resources */,
 				E9BE7C3A221E251D007DA83B /* LaunchScreen.storyboard in Resources */,
@@ -301,6 +330,7 @@
 				E9BE7C59221E3681007DA83B /* icon_tabbar_merchant_selected@2x.png in Resources */,
 				E9BE7C5F221E3681007DA83B /* icon_tabbar_homepage_selected@2x.png in Resources */,
 				E9BE7C48221E2C03007DA83B /* LoginViewController.xib in Resources */,
+				E9F6C70E2230C7F600F78CF3 /* WX20190306-193048@2x.png in Resources */,
 				E9BE7C84221E7066007DA83B /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,12 +381,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9F6C7032230C1B500F78CF3 /* SelectViewController.m in Sources */,
 				E9BE7C7E221E6DB4007DA83B /* MyTabViewController.m in Sources */,
 				E9BE7C3D221E251D007DA83B /* main.m in Sources */,
 				E9F6C6F62230B04500F78CF3 /* DrinkTableViewCell.m in Sources */,
 				E9BE7C2F221E251C007DA83B /* AppDelegate.m in Sources */,
 				E9BE7C83221E7066007DA83B /* HomeViewController.m in Sources */,
 				E9BE7C47221E2C03007DA83B /* LoginViewController.m in Sources */,
+				E9F6C70A2230C68700F78CF3 /* SelectCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

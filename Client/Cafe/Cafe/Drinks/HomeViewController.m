@@ -8,6 +8,7 @@
 
 #import "HomeViewController.h"
 #import "DrinkTableViewCell.h"
+#import "SelectViewController.h"
 
 @interface HomeViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -53,6 +54,12 @@
 
 -(void)showCafeButtonPressed{
     NSLog(@"button pressed");
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    SelectViewController *svc = [[SelectViewController alloc] init];
+    [self.navigationController pushViewController:svc animated:YES];
 }
 
 /*
