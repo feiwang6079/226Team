@@ -12,6 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SelectCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *selectImage;
+
+@property (weak, nonatomic) IBOutlet UILabel *selectLabel;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

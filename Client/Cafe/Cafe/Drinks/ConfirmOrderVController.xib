@@ -9,9 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConfirmOrderVController">
             <connections>
-                <outlet property="myTableView" destination="FZC-cu-xxo" id="GpB-kC-gUH"/>
+                <outlet property="myTableView" destination="LXk-Lr-eNr" id="luy-73-D8r"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,20 +20,18 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="105" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="FZC-cu-xxo">
-                    <rect key="frame" x="0.0" y="88" width="375" height="641"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="LXk-Lr-eNr">
+                    <rect key="frame" x="0.0" y="88" width="375" height="724"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <connections>
-                        <outlet property="dataSource" destination="-1" id="sbp-8T-7Lz"/>
-                        <outlet property="delegate" destination="-1" id="Xgv-vo-Mtb"/>
+                        <outlet property="dataSource" destination="-1" id="ZFe-9S-wKY"/>
+                        <outlet property="delegate" destination="-1" id="dB7-nE-yaP"/>
                     </connections>
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <nil key="simulatedTopBarMetrics"/>
-            <nil key="simulatedBottomBarMetrics"/>
-            <point key="canvasLocation" x="-175" y="-211"/>
+            <point key="canvasLocation" x="97" y="70"/>
         </view>
     </objects>
 </document>

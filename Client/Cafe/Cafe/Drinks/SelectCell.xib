@@ -30,7 +30,7 @@
                         <color key="textColor" red="0.21570038795471191" green="0.21562886238098145" blue="0.21960896253585815" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+$0.19" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIY-tY-JNb">
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+$0.19" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIY-tY-JNb">
                         <rect key="frame" x="292" y="20" width="69" height="15"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -40,7 +40,11 @@
                 </subviews>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
-            <point key="canvasLocation" x="31.199999999999999" y="88.15592203898052"/>
+            <connections>
+                <outlet property="selectImage" destination="BN4-dd-YKj" id="eWP-Ze-wzi"/>
+                <outlet property="selectLabel" destination="bXv-eK-Chm" id="KnI-H4-Pqs"/>
+            </connections>
+            <point key="canvasLocation" x="178" y="-76"/>
         </tableViewCell>
     </objects>
     <resources>

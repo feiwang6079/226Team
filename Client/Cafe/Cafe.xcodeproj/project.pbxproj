@@ -31,6 +31,10 @@
 		E9BE7C7F221E6DB4007DA83B /* MyTabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9BE7C7D221E6DB4007DA83B /* MyTabViewController.xib */; };
 		E9BE7C83221E7066007DA83B /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9BE7C81221E7066007DA83B /* HomeViewController.m */; };
 		E9BE7C84221E7066007DA83B /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9BE7C82221E7066007DA83B /* HomeViewController.xib */; };
+		E9E4534B2234953E00A0A561 /* ConfirmOrderVController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E453492234953E00A0A561 /* ConfirmOrderVController.m */; };
+		E9E4534C2234953E00A0A561 /* ConfirmOrderVController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9E4534A2234953E00A0A561 /* ConfirmOrderVController.xib */; };
+		E9E453502234972700A0A561 /* OrderInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E4534E2234972700A0A561 /* OrderInfoCell.m */; };
+		E9E453512234972700A0A561 /* OrderInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9E4534F2234972700A0A561 /* OrderInfoCell.xib */; };
 		E9F6C6F62230B04500F78CF3 /* DrinkTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F6C6F42230B04500F78CF3 /* DrinkTableViewCell.m */; };
 		E9F6C6F72230B04500F78CF3 /* DrinkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9F6C6F52230B04500F78CF3 /* DrinkTableViewCell.xib */; };
 		E9F6C6F92230B59100F78CF3 /* drink@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9F6C6F82230B59100F78CF3 /* drink@2x.png */; };
@@ -76,6 +80,12 @@
 		E9BE7C80221E7066007DA83B /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		E9BE7C81221E7066007DA83B /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		E9BE7C82221E7066007DA83B /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		E9E453482234953E00A0A561 /* ConfirmOrderVController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfirmOrderVController.h; sourceTree = "<group>"; };
+		E9E453492234953E00A0A561 /* ConfirmOrderVController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfirmOrderVController.m; sourceTree = "<group>"; };
+		E9E4534A2234953E00A0A561 /* ConfirmOrderVController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfirmOrderVController.xib; sourceTree = "<group>"; };
+		E9E4534D2234972700A0A561 /* OrderInfoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderInfoCell.h; sourceTree = "<group>"; };
+		E9E4534E2234972700A0A561 /* OrderInfoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderInfoCell.m; sourceTree = "<group>"; };
+		E9E4534F2234972700A0A561 /* OrderInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderInfoCell.xib; sourceTree = "<group>"; };
 		E9F6C6F12230AC5100F78CF3 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = Cafe/Public/PrefixHeader.pch; sourceTree = SOURCE_ROOT; };
 		E9F6C6F32230B04500F78CF3 /* DrinkTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrinkTableViewCell.h; sourceTree = "<group>"; };
 		E9F6C6F42230B04500F78CF3 /* DrinkTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrinkTableViewCell.m; sourceTree = "<group>"; };
@@ -243,6 +253,12 @@
 				E9F6C7072230C68700F78CF3 /* SelectCell.h */,
 				E9F6C7082230C68700F78CF3 /* SelectCell.m */,
 				E9F6C7092230C68700F78CF3 /* SelectCell.xib */,
+				E9E453482234953E00A0A561 /* ConfirmOrderVController.h */,
+				E9E453492234953E00A0A561 /* ConfirmOrderVController.m */,
+				E9E4534A2234953E00A0A561 /* ConfirmOrderVController.xib */,
+				E9E4534D2234972700A0A561 /* OrderInfoCell.h */,
+				E9E4534E2234972700A0A561 /* OrderInfoCell.m */,
+				E9E4534F2234972700A0A561 /* OrderInfoCell.xib */,
 			);
 			path = Drinks;
 			sourceTree = "<group>";
@@ -313,8 +329,10 @@
 				E9BE7C5E221E3681007DA83B /* icon_tabbar_mine_selected@2x.png in Resources */,
 				E9BE7C60221E3681007DA83B /* icon_tabbar_onsite@2x.png in Resources */,
 				E9F6C6F72230B04500F78CF3 /* DrinkTableViewCell.xib in Resources */,
+				E9E4534C2234953E00A0A561 /* ConfirmOrderVController.xib in Resources */,
 				E9F6C70B2230C68700F78CF3 /* SelectCell.xib in Resources */,
 				E9F6C7042230C1B500F78CF3 /* SelectViewController.xib in Resources */,
+				E9E453512234972700A0A561 /* OrderInfoCell.xib in Resources */,
 				E9BE7C7F221E6DB4007DA83B /* MyTabViewController.xib in Resources */,
 				E9BE7C67221E5670007DA83B /* background_home_searchBar@2x.png in Resources */,
 				E9F6C70F2230C7F600F78CF3 /* WX20190306-193015@2x.png in Resources */,
@@ -385,7 +403,9 @@
 				E9BE7C7E221E6DB4007DA83B /* MyTabViewController.m in Sources */,
 				E9BE7C3D221E251D007DA83B /* main.m in Sources */,
 				E9F6C6F62230B04500F78CF3 /* DrinkTableViewCell.m in Sources */,
+				E9E4534B2234953E00A0A561 /* ConfirmOrderVController.m in Sources */,
 				E9BE7C2F221E251C007DA83B /* AppDelegate.m in Sources */,
+				E9E453502234972700A0A561 /* OrderInfoCell.m in Sources */,
 				E9BE7C83221E7066007DA83B /* HomeViewController.m in Sources */,
 				E9BE7C47221E2C03007DA83B /* LoginViewController.m in Sources */,
 				E9F6C70A2230C68700F78CF3 /* SelectCell.m in Sources */,

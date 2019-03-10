@@ -20,6 +20,11 @@
 
 @implementation HomeViewController
 
+-(void) viewWillAppear:(BOOL)animated{
+    self.tabBarController.tabBar.hidden = NO;
+
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -60,6 +65,7 @@
 {
     SelectViewController *svc = [[SelectViewController alloc] init];
     [self.navigationController pushViewController:svc animated:YES];
+    [tableView deselectRowAtIndexPath:indexPath animated:FALSE];
 }
 
 /*
