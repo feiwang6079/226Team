@@ -48,6 +48,19 @@
 		E9F6C70F2230C7F600F78CF3 /* WX20190306-193015@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9F6C70D2230C7F500F78CF3 /* WX20190306-193015@2x.png */; };
 		E9FE7704223C753100E82488 /* SubmitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FE7702223C753100E82488 /* SubmitCell.m */; };
 		E9FE7705223C753100E82488 /* SubmitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9FE7703223C753100E82488 /* SubmitCell.xib */; };
+		E9FE7709223C7AEA00E82488 /* AddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FE7707223C7AEA00E82488 /* AddressViewController.m */; };
+		E9FE770A223C7AEA00E82488 /* AddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9FE7708223C7AEA00E82488 /* AddressViewController.xib */; };
+		E9FE770E223C7BA200E82488 /* AddressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FE770C223C7BA200E82488 /* AddressCell.m */; };
+		E9FE770F223C7BA200E82488 /* AddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9FE770D223C7BA200E82488 /* AddressCell.xib */; };
+		E9FE7711223C7DCD00E82488 /* info.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9FE7710223C7DCC00E82488 /* info.jpg */; };
+		E9FE7716223C7EFD00E82488 /* OrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FE7714223C7EFD00E82488 /* OrderViewController.m */; };
+		E9FE7717223C7EFD00E82488 /* OrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9FE7715223C7EFD00E82488 /* OrderViewController.xib */; };
+		E9FE771B223C806800E82488 /* OrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FE7719223C806800E82488 /* OrderCell.m */; };
+		E9FE771C223C806800E82488 /* OrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9FE771A223C806800E82488 /* OrderCell.xib */; };
+		E9FE771E223C843200E82488 /* order.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9FE771D223C843200E82488 /* order.jpg */; };
+		E9FE7720223C86DD00E82488 /* orderDetail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9FE771F223C86DD00E82488 /* orderDetail.jpg */; };
+		E9FE7725223C882E00E82488 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FE7723223C882E00E82488 /* MyViewController.m */; };
+		E9FE7726223C882E00E82488 /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9FE7724223C882E00E82488 /* MyViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +119,24 @@
 		E9FE7701223C753100E82488 /* SubmitCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubmitCell.h; sourceTree = "<group>"; };
 		E9FE7702223C753100E82488 /* SubmitCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubmitCell.m; sourceTree = "<group>"; };
 		E9FE7703223C753100E82488 /* SubmitCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubmitCell.xib; sourceTree = "<group>"; };
+		E9FE7706223C7AEA00E82488 /* AddressViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressViewController.h; sourceTree = "<group>"; };
+		E9FE7707223C7AEA00E82488 /* AddressViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressViewController.m; sourceTree = "<group>"; };
+		E9FE7708223C7AEA00E82488 /* AddressViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressViewController.xib; sourceTree = "<group>"; };
+		E9FE770B223C7BA200E82488 /* AddressCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressCell.h; sourceTree = "<group>"; };
+		E9FE770C223C7BA200E82488 /* AddressCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressCell.m; sourceTree = "<group>"; };
+		E9FE770D223C7BA200E82488 /* AddressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressCell.xib; sourceTree = "<group>"; };
+		E9FE7710223C7DCC00E82488 /* info.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = info.jpg; sourceTree = "<group>"; };
+		E9FE7713223C7EFD00E82488 /* OrderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderViewController.h; sourceTree = "<group>"; };
+		E9FE7714223C7EFD00E82488 /* OrderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderViewController.m; sourceTree = "<group>"; };
+		E9FE7715223C7EFD00E82488 /* OrderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderViewController.xib; sourceTree = "<group>"; };
+		E9FE7718223C806800E82488 /* OrderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderCell.h; sourceTree = "<group>"; };
+		E9FE7719223C806800E82488 /* OrderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderCell.m; sourceTree = "<group>"; };
+		E9FE771A223C806800E82488 /* OrderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderCell.xib; sourceTree = "<group>"; };
+		E9FE771D223C843200E82488 /* order.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = order.jpg; sourceTree = "<group>"; };
+		E9FE771F223C86DD00E82488 /* orderDetail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = orderDetail.jpg; sourceTree = "<group>"; };
+		E9FE7722223C882E00E82488 /* MyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		E9FE7723223C882E00E82488 /* MyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
+		E9FE7724223C882E00E82488 /* MyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyViewController.xib; sourceTree = "<group>"; };
 		FD3219446BD0DC81A8F59E47 /* Pods-Cafe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cafe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cafe/Pods-Cafe.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -160,6 +191,8 @@
 		E9BE7C2C221E251C007DA83B /* Cafe */ = {
 			isa = PBXGroup;
 			children = (
+				E9FE7721223C881900E82488 /* My */,
+				E9FE7712223C7ED700E82488 /* Orders */,
 				E9F6C6F22230AFCC00F78CF3 /* Drinks */,
 				E9F6C6EF2230A84300F78CF3 /* Public */,
 				E9BE7C43221E2BE1007DA83B /* Controller */,
@@ -199,6 +232,9 @@
 		E9BE7C4D221E3681007DA83B /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				E9FE771F223C86DD00E82488 /* orderDetail.jpg */,
+				E9FE771D223C843200E82488 /* order.jpg */,
+				E9FE7710223C7DCC00E82488 /* info.jpg */,
 				E9F6C70D2230C7F500F78CF3 /* WX20190306-193015@2x.png */,
 				E9F6C70C2230C7F500F78CF3 /* WX20190306-193048@2x.png */,
 				E9F6C7052230C48400F78CF3 /* Topping.png */,
@@ -267,8 +303,37 @@
 				E9FE7701223C753100E82488 /* SubmitCell.h */,
 				E9FE7702223C753100E82488 /* SubmitCell.m */,
 				E9FE7703223C753100E82488 /* SubmitCell.xib */,
+				E9FE7706223C7AEA00E82488 /* AddressViewController.h */,
+				E9FE7707223C7AEA00E82488 /* AddressViewController.m */,
+				E9FE7708223C7AEA00E82488 /* AddressViewController.xib */,
+				E9FE770B223C7BA200E82488 /* AddressCell.h */,
+				E9FE770C223C7BA200E82488 /* AddressCell.m */,
+				E9FE770D223C7BA200E82488 /* AddressCell.xib */,
 			);
 			path = Drinks;
+			sourceTree = "<group>";
+		};
+		E9FE7712223C7ED700E82488 /* Orders */ = {
+			isa = PBXGroup;
+			children = (
+				E9FE7713223C7EFD00E82488 /* OrderViewController.h */,
+				E9FE7714223C7EFD00E82488 /* OrderViewController.m */,
+				E9FE7715223C7EFD00E82488 /* OrderViewController.xib */,
+				E9FE7718223C806800E82488 /* OrderCell.h */,
+				E9FE7719223C806800E82488 /* OrderCell.m */,
+				E9FE771A223C806800E82488 /* OrderCell.xib */,
+			);
+			path = Orders;
+			sourceTree = "<group>";
+		};
+		E9FE7721223C881900E82488 /* My */ = {
+			isa = PBXGroup;
+			children = (
+				E9FE7722223C882E00E82488 /* MyViewController.h */,
+				E9FE7723223C882E00E82488 /* MyViewController.m */,
+				E9FE7724223C882E00E82488 /* MyViewController.xib */,
+			);
+			path = My;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,33 +397,41 @@
 			files = (
 				E9F6C7062230C48400F78CF3 /* Topping.png in Resources */,
 				E9BE7C5D221E3681007DA83B /* icon_tabbar_mine@2x.png in Resources */,
+				E9FE770F223C7BA200E82488 /* AddressCell.xib in Resources */,
+				E9FE7711223C7DCD00E82488 /* info.jpg in Resources */,
 				E9F6C6F92230B59100F78CF3 /* drink@2x.png in Resources */,
 				E9F6C6FF2230BFD300F78CF3 /* icon_homepage_map_selected_old.png in Resources */,
 				E9BE7C5E221E3681007DA83B /* icon_tabbar_mine_selected@2x.png in Resources */,
 				E9BE7C60221E3681007DA83B /* icon_tabbar_onsite@2x.png in Resources */,
 				E9F6C6F72230B04500F78CF3 /* DrinkTableViewCell.xib in Resources */,
+				E9FE7720223C86DD00E82488 /* orderDetail.jpg in Resources */,
 				E9E4534C2234953E00A0A561 /* ConfirmOrderVController.xib in Resources */,
 				E9F6C70B2230C68700F78CF3 /* SelectCell.xib in Resources */,
 				E9F6C7042230C1B500F78CF3 /* SelectViewController.xib in Resources */,
+				E9FE7726223C882E00E82488 /* MyViewController.xib in Resources */,
 				E9E453512234972700A0A561 /* OrderInfoCell.xib in Resources */,
 				E9BE7C7F221E6DB4007DA83B /* MyTabViewController.xib in Resources */,
 				E9BE7C67221E5670007DA83B /* background_home_searchBar@2x.png in Resources */,
 				E9F6C70F2230C7F600F78CF3 /* WX20190306-193015@2x.png in Resources */,
+				E9FE7717223C7EFD00E82488 /* OrderViewController.xib in Resources */,
 				E9BE7C69221E5726007DA83B /* login_button@2x.png in Resources */,
 				E9BE7C5A221E3681007DA83B /* icon_tabbar_homepage@2x.png in Resources */,
 				E9FE7705223C753100E82488 /* SubmitCell.xib in Resources */,
 				E9BE7C3A221E251D007DA83B /* LaunchScreen.storyboard in Resources */,
 				E9BE7C5C221E3681007DA83B /* icon_tabbar_onsite_selected@2x.png in Resources */,
+				E9FE771C223C806800E82488 /* OrderCell.xib in Resources */,
 				E9BE7C5B221E3681007DA83B /* icon_tabbar_misc_selected@2x.png in Resources */,
 				E9BE7C37221E251D007DA83B /* Assets.xcassets in Resources */,
 				E9BE7C64221E3699007DA83B /* btn_backItem.png in Resources */,
 				E9BE7C61221E3681007DA83B /* icon_tabbar_merchant_normal@2x.png in Resources */,
 				E9BE7C62221E3681007DA83B /* icon_tabbar_misc@2x.png in Resources */,
 				E9BE7C59221E3681007DA83B /* icon_tabbar_merchant_selected@2x.png in Resources */,
+				E9FE770A223C7AEA00E82488 /* AddressViewController.xib in Resources */,
 				E9BE7C5F221E3681007DA83B /* icon_tabbar_homepage_selected@2x.png in Resources */,
 				E9BE7C48221E2C03007DA83B /* LoginViewController.xib in Resources */,
 				E9F6C70E2230C7F600F78CF3 /* WX20190306-193048@2x.png in Resources */,
 				E9BE7C84221E7066007DA83B /* HomeViewController.xib in Resources */,
+				E9FE771E223C843200E82488 /* order.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,13 +483,18 @@
 			files = (
 				E9F6C7032230C1B500F78CF3 /* SelectViewController.m in Sources */,
 				E9BE7C7E221E6DB4007DA83B /* MyTabViewController.m in Sources */,
+				E9FE7725223C882E00E82488 /* MyViewController.m in Sources */,
 				E9BE7C3D221E251D007DA83B /* main.m in Sources */,
+				E9FE7709223C7AEA00E82488 /* AddressViewController.m in Sources */,
 				E9F6C6F62230B04500F78CF3 /* DrinkTableViewCell.m in Sources */,
 				E9E4534B2234953E00A0A561 /* ConfirmOrderVController.m in Sources */,
 				E9BE7C2F221E251C007DA83B /* AppDelegate.m in Sources */,
 				E9E453502234972700A0A561 /* OrderInfoCell.m in Sources */,
+				E9FE770E223C7BA200E82488 /* AddressCell.m in Sources */,
+				E9FE771B223C806800E82488 /* OrderCell.m in Sources */,
 				E9BE7C83221E7066007DA83B /* HomeViewController.m in Sources */,
 				E9BE7C47221E2C03007DA83B /* LoginViewController.m in Sources */,
+				E9FE7716223C7EFD00E82488 /* OrderViewController.m in Sources */,
 				E9FE7704223C753100E82488 /* SubmitCell.m in Sources */,
 				E9F6C70A2230C68700F78CF3 /* SelectCell.m in Sources */,
 			);

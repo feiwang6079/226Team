@@ -8,6 +8,8 @@
 
 #import "MyTabViewController.h"
 #import "HomeViewController.h"
+#import "OrderViewController.h"
+#import "MyViewController.h"
 
 #define RGBA(r, g, b, a)                    [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
 #define RGB(r, g, b)                        RGBA(r, g, b, 1.0f)
@@ -24,11 +26,16 @@
     
     
     HomeViewController *homeController = [[HomeViewController alloc] init];
-    UINavigationController *nv = [[UINavigationController alloc] initWithRootViewController:homeController];
+    UINavigationController *hnv1 = [[UINavigationController alloc] initWithRootViewController:homeController];
     
-    HomeViewController *hvc2 = [[HomeViewController alloc] init];
-    HomeViewController *hvc3 = [[HomeViewController alloc] init];
-    self.viewControllers = [NSArray arrayWithObjects:nv,hvc2,hvc3, nil];
+    OrderViewController *orderViewController = [[OrderViewController alloc] init];
+    UINavigationController *hnv2 = [[UINavigationController alloc] initWithRootViewController:orderViewController];
+
+    
+    MyViewController *myViewController = [[MyViewController alloc] init];
+    UINavigationController *hvc3 = [[UINavigationController alloc] initWithRootViewController:myViewController];
+
+    self.viewControllers = [NSArray arrayWithObjects:hnv1,hnv2,hvc3, nil];
     
     UITabBar *tabBar =self.tabBar;
     UITabBarItem *tabBarItem1 = [tabBar.items objectAtIndex:0];
