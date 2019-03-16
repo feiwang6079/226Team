@@ -1,12 +1,16 @@
 package com.cmpe226.cafe;
 
+import java.util.concurrent.atomic.AtomicLong;
+
+import com.sun.tools.corba.se.idl.constExpr.Or;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 /**
  * Get order: curl -X GET 'http://localhost:8080/orders?q=get&order_id=0'
  * Create order: curl -X GET 'http://localhost:8080/orders?q=post&total_price=3&status=pending'
  * Update order: curl -X GET 'http://localhost:8080/orders?q=update&order_id=0&total_price=100&status=paid'
- * Delete order: curl -X GET 'http://localhost:8080/orders?q=delete&order_id=1'
+ * Delete order: curl -X GET 'http://localhosst:8080/orders?q=delete&order_id=1'
  */
 
 @RestController
@@ -15,7 +19,7 @@ public class OrderController {
     OrderResource orderResource = new OrderResource();
 
     @GetMapping("/orders")
-    public Order orders(
+    public Orders orders(
             @RequestParam(value="q", defaultValue = "") String request,
             @RequestParam(value="order_id", defaultValue = "")  Long order_id,
             @RequestParam(value="total_price", defaultValue = "")  Long total_price,
@@ -29,17 +33,17 @@ public class OrderController {
 
         if (request.equals("get")) {
             // Get an order
-            Order order = orderResource.get(order_id);
+            Orders order = orderResource.get(order_id);
             return order;
         } else if (request.equals("post")){
             // Create a post
-            Order order = new Order(total_price, status);
+            Orders order = new Orders(total_price, status);
             order_id = orderResource.create(order);
             order.setOrder_id(order_id);
             return order;
         } else if (request.equals("update")) {
             // Update an order
-            Order order = orderResource.get(order_id);
+            Orders order = orderResource.get(order_id);
             if (total_price != null) {
                 order.setTotal_price(total_price);
             }
@@ -51,7 +55,12 @@ public class OrderController {
             // Delete an order
             orderResource.delete(order_id);
         }
-
         return null;
+    }
+
+    @GetMapping("/orders/{order_id}")
+    public Orders greeting(@PathVariable Long order_id) {
+        Orders order = orderResource.get(order_id);
+        return order;
     }
 }

@@ -1,13 +1,30 @@
 package com.cmpe226.cafe;
 
-public class Order {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Orders {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long order_id;
     private double total_price;
     private String status;
 
-    public Order(double total_price, String status) {
+    public Orders(long order_id, double total_price, String status) {
         this.total_price = total_price;
         this.status = status;
+        this.setOrder_id(order_id);
+    }
+
+    public Orders(double total_price, String status) {
+        this.total_price = total_price;
+        this.status = status;
+    }
+
+    public Orders(){
     }
 
     public long getOrder_id() {

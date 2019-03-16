@@ -5,29 +5,29 @@ import java.util.Map;
 
 public class OrderResource {
 
-    private Map<Long, Order> orders = new HashMap<>();
+    private Map<Long, Orders> orders = new HashMap<>();
     private long nextId = 0;
 
     public OrderResource(){
         // generating 3 fake order
-        Order order;
+        Orders order;
         long order_id;
 
-        order = new Order(
+        order = new Orders(
                 5,
                 "Preparing"
         );
         order_id = create(order);
         order.setOrder_id(order_id);
 
-        order = new Order(
+        order = new Orders(
                 12,
                 "Ready"
         );
         order_id = create(order);
         order.setOrder_id(order_id);
 
-        order = new Order(
+        order = new Orders(
                 8,
                 "Paid"
         );
@@ -35,11 +35,11 @@ public class OrderResource {
         order.setOrder_id(order_id);
     }
 
-    public Order get(long id) {
+    public Orders get(long id) {
         return orders.get(id);
     }
 
-    public long create(Order order) {
+    public long create(Orders order) {
         order.setOrder_id(nextId);
         orders.put(nextId, order);
         nextId++;
@@ -50,9 +50,13 @@ public class OrderResource {
         orders.remove(id);
     }
 
-    public void update(Long id, Order order) {
+    public void update(Long id, Orders order) {
         order.setOrder_id(id);
         orders.put(id, order);
     }
 
 }
+
+
+
+
