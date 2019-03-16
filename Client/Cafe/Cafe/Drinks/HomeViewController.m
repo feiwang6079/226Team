@@ -21,7 +21,11 @@
 @implementation HomeViewController
 
 -(void) viewWillAppear:(BOOL)animated{
-    self.tabBarController.tabBar.hidden = NO;
+    if(self.isSecondIncome){
+        self.tabBarController.tabBar.hidden = YES;
+    }else{
+        self.tabBarController.tabBar.hidden = NO;
+    }
 
 }
 

@@ -9,6 +9,7 @@
 #import "SelectViewController.h"
 #import "SelectCell.h"
 #import "ConfirmOrderVController.h"
+#import "HomeViewController.h"
 
 @interface SelectViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -118,8 +119,8 @@
     //添加确定到UIAlertController中
     UIAlertAction *OKAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
 //        NSLog(@"点击了完成按钮");
-        
-        SelectViewController *svc = [[SelectViewController alloc] init];
+        HomeViewController *svc = [[HomeViewController alloc] init];
+        svc.isSecondIncome = YES;
         [self.navigationController pushViewController:svc animated:YES];
     }];
     [alertController addAction:OKAction];

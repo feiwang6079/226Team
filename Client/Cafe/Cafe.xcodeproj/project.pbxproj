@@ -46,6 +46,8 @@
 		E9F6C70B2230C68700F78CF3 /* SelectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9F6C7092230C68700F78CF3 /* SelectCell.xib */; };
 		E9F6C70E2230C7F600F78CF3 /* WX20190306-193048@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9F6C70C2230C7F500F78CF3 /* WX20190306-193048@2x.png */; };
 		E9F6C70F2230C7F600F78CF3 /* WX20190306-193015@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9F6C70D2230C7F500F78CF3 /* WX20190306-193015@2x.png */; };
+		E9FE7704223C753100E82488 /* SubmitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FE7702223C753100E82488 /* SubmitCell.m */; };
+		E9FE7705223C753100E82488 /* SubmitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9FE7703223C753100E82488 /* SubmitCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +103,9 @@
 		E9F6C7092230C68700F78CF3 /* SelectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectCell.xib; sourceTree = "<group>"; };
 		E9F6C70C2230C7F500F78CF3 /* WX20190306-193048@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WX20190306-193048@2x.png"; sourceTree = "<group>"; };
 		E9F6C70D2230C7F500F78CF3 /* WX20190306-193015@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WX20190306-193015@2x.png"; sourceTree = "<group>"; };
+		E9FE7701223C753100E82488 /* SubmitCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubmitCell.h; sourceTree = "<group>"; };
+		E9FE7702223C753100E82488 /* SubmitCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubmitCell.m; sourceTree = "<group>"; };
+		E9FE7703223C753100E82488 /* SubmitCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubmitCell.xib; sourceTree = "<group>"; };
 		FD3219446BD0DC81A8F59E47 /* Pods-Cafe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cafe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cafe/Pods-Cafe.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -259,6 +264,9 @@
 				E9E4534D2234972700A0A561 /* OrderInfoCell.h */,
 				E9E4534E2234972700A0A561 /* OrderInfoCell.m */,
 				E9E4534F2234972700A0A561 /* OrderInfoCell.xib */,
+				E9FE7701223C753100E82488 /* SubmitCell.h */,
+				E9FE7702223C753100E82488 /* SubmitCell.m */,
+				E9FE7703223C753100E82488 /* SubmitCell.xib */,
 			);
 			path = Drinks;
 			sourceTree = "<group>";
@@ -338,6 +346,7 @@
 				E9F6C70F2230C7F600F78CF3 /* WX20190306-193015@2x.png in Resources */,
 				E9BE7C69221E5726007DA83B /* login_button@2x.png in Resources */,
 				E9BE7C5A221E3681007DA83B /* icon_tabbar_homepage@2x.png in Resources */,
+				E9FE7705223C753100E82488 /* SubmitCell.xib in Resources */,
 				E9BE7C3A221E251D007DA83B /* LaunchScreen.storyboard in Resources */,
 				E9BE7C5C221E3681007DA83B /* icon_tabbar_onsite_selected@2x.png in Resources */,
 				E9BE7C5B221E3681007DA83B /* icon_tabbar_misc_selected@2x.png in Resources */,
@@ -408,6 +417,7 @@
 				E9E453502234972700A0A561 /* OrderInfoCell.m in Sources */,
 				E9BE7C83221E7066007DA83B /* HomeViewController.m in Sources */,
 				E9BE7C47221E2C03007DA83B /* LoginViewController.m in Sources */,
+				E9FE7704223C753100E82488 /* SubmitCell.m in Sources */,
 				E9F6C70A2230C68700F78CF3 /* SelectCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

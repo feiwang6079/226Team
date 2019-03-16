@@ -8,8 +8,9 @@
 
 #import "ConfirmOrderVController.h"
 #import "OrderInfoCell.h"
+#import "SubmitCell.h"
 
-@interface ConfirmOrderVController ()<UITableViewDelegate, UITableViewDataSource>
+@interface ConfirmOrderVController ()<UITableViewDelegate, UITableViewDataSource, SubmitCellDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
 
@@ -33,41 +34,44 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-//    if(section == 0)
-//        return 2;
-//    else
-//        return 1;
-    return 1;
+    if(section == 0){
+        return 2;
+    }else{
+        return 1;
+    }
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    if(indexPath.section == 0){
-//        return 81;
-//    }
-    return 81;
+    if(indexPath.row == 0){
+        return 81;
+    }else{
+        return 74;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    OrderInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"orderCell"];
-    if(cell == nil){
-        cell = [[[NSBundle mainBundle] loadNibNamed:@"OrderInfoCell" owner:self options:nil] lastObject];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    if(indexPath.section == 0){
+        OrderInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"orderCell"];
+        if(cell == nil){
+            cell = [[[NSBundle mainBundle] loadNibNamed:@"OrderInfoCell" owner:self options:nil] lastObject];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        }
+        return cell;
+    }else{
+        SubmitCell *cell = [tableView dequeueReusableCellWithIdentifier:@"submitCell"];
+        if(cell == nil){
+            cell = [[[NSBundle mainBundle] loadNibNamed:@"SubmitCell" owner:self options:nil] lastObject];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        }
+        cell.delegate = self;
+        return cell;
     }
-
-    return cell;
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-//    NSString *key = [_selectArray objectAtIndex:indexPath.section];
-//    int row = [[_selectDic objectForKey:key] intValue];
-//    if(row != indexPath.row){
-//        [_selectDic setValue:[NSString stringWithFormat:@"%lu", indexPath.row] forKey:[_selectArray objectAtIndex:indexPath.section]];
-//        [tableView reloadData];
-//    }
+-(void)submitPressed{
+    
 }
-
 
 
 
