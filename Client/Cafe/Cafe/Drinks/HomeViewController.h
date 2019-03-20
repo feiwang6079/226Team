@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HomeViewController : UIViewController
 
+@property(assign, nonatomic) Boolean isSecondIncome;
+
 @end
 
 NS_ASSUME_NONNULL_END
