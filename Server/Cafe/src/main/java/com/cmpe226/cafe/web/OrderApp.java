@@ -13,7 +13,7 @@ import java.util.Optional;
 public class OrderApp {
 
 
-    
+
     @Autowired
     private OrderService orderService;
 
@@ -56,7 +56,6 @@ public class OrderApp {
         Orders orders = new Orders(order_id, total_price, status);
         return orderService.save(orders);
     }
-
 
     /**
      * 查找一个
