@@ -8,6 +8,11 @@
 
 #import "LoginViewController.h"
 #import "SVProgressHUD.h"
+#import "AFURLSessionManager.h"
+#import "AFHTTPSessionManager.h"
+#import "NetworkManager.h"
+#import "YYModel.h"
+#import "User.h"
 
 @interface LoginViewController ()<UITextFieldDelegate>
 
@@ -29,8 +34,29 @@
 //        NSLog(@"123123");
         
     }
+
+    
     return YES;
+
 }
+    
+- (IBAction)loginButtonPressed:(id)sender {
+    NSDictionary * dic = [NSDictionary dictionaryWithObjectsAndKeys:@"login" ,@"q",
+                          @"user1", @"username",
+                          @"pass1", @"password", nil];
+    
+    
+    User *user = [User yy_modelWithDictionary:dic];
+    NSLog(@"%@", user);
+/*
+    [[NetworkManager sharedNetworkManager] getWithUrlString:@"http://172.20.10.8:8080/users" parameters:dic success:^(id response){
+        NSLog(@"%@", response);
+    } failure:^(NSError *error){
+        NSLog(@"%@", error);
+    }];
+ */
+}
+    
 
 
 
