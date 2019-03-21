@@ -32,7 +32,7 @@
     [self.window makeKeyAndVisible];
     
     tabBarController = [[MyTabViewController alloc]  init];
-    [self.window setRootViewController:tabBarController];
+    [self.window setRootViewController:vc];
 
     
     
