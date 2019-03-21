@@ -10,22 +10,22 @@ import java.util.Optional;
 
 @Service
 public class OrderService {
-    @Autowired
-    private OrderRepository orderRepository;
+  //  @Autowired
+ //   private OrderRepository orderRepository;
 
-    public List<Orders> findAll(){
-        return orderRepository.findAll();
-    }
-
-    public Orders save(Orders ord){
-        return orderRepository.save(ord);
-    }
-
-    public Optional<Orders> getOne(long id){
-        return orderRepository.findById(id);
-    }
-
-    public void delete(long id){
-        orderRepository.deleteById(id);
-    }
+//    public List<Orders> findAll(){
+//        return orderRepository.findAll();
+//    }
+//
+//    public Orders save(Orders ord){
+//        return orderRepository.save(ord);
+//    }
+//
+//    public Optional<Orders> getOne(long id){
+//        return orderRepository.findById(id);
+//    }
+//
+//    public void delete(long id){
+//        orderRepository.deleteById(id);
+//    }
 }

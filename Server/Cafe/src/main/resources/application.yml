@@ -7,13 +7,13 @@ logging:
     root: info
     com.cmpe226.cafe: debug
   file: logs/debug.log
-spring:
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/online_edu?useUnicode=true&characterEncoding=utf-8
-    username: root
-    password: 272716
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
+#spring:
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/online_edu?useUnicode=true&characterEncoding=utf-8
+#    username: root
+#    password: 272716
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    show-sql: true
