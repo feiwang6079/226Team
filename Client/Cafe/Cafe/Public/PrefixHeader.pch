@@ -21,4 +21,6 @@
 
 #define navigationBarColor RGB(33, 192, 174)
 
+#define URL @"http://172.20.10.8:8080/"
+
 #endif /* PrefixHeader_pch */

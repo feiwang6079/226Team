@@ -48,13 +48,13 @@
     
     User *user = [User yy_modelWithDictionary:dic];
     NSLog(@"%@", user);
-/*
-    [[NetworkManager sharedNetworkManager] getWithUrlString:@"http://172.20.10.8:8080/users" parameters:dic success:^(id response){
+
+    [[NetworkManager sharedNetworkManager] getWithUrlString:[NSString stringWithFormat:@"%@users",URL] parameters:dic success:^(id response){
         NSLog(@"%@", response);
     } failure:^(NSError *error){
         NSLog(@"%@", error);
     }];
- */
+ 
 }
     
 

@@ -33,6 +33,7 @@
 		E9BE7C7F221E6DB4007DA83B /* MyTabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9BE7C7D221E6DB4007DA83B /* MyTabViewController.xib */; };
 		E9BE7C83221E7066007DA83B /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9BE7C81221E7066007DA83B /* HomeViewController.m */; };
 		E9BE7C84221E7066007DA83B /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9BE7C82221E7066007DA83B /* HomeViewController.xib */; };
+		E9D25A52224544DC00B65E29 /* PublicMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D25A51224544DC00B65E29 /* PublicMethod.m */; };
 		E9E4534B2234953E00A0A561 /* ConfirmOrderVController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E453492234953E00A0A561 /* ConfirmOrderVController.m */; };
 		E9E4534C2234953E00A0A561 /* ConfirmOrderVController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9E4534A2234953E00A0A561 /* ConfirmOrderVController.xib */; };
 		E9E453502234972700A0A561 /* OrderInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E4534E2234972700A0A561 /* OrderInfoCell.m */; };
@@ -101,6 +102,8 @@
 		E9BE7C80221E7066007DA83B /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		E9BE7C81221E7066007DA83B /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		E9BE7C82221E7066007DA83B /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		E9D25A50224544DC00B65E29 /* PublicMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicMethod.h; sourceTree = "<group>"; };
+		E9D25A51224544DC00B65E29 /* PublicMethod.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublicMethod.m; sourceTree = "<group>"; };
 		E9E453482234953E00A0A561 /* ConfirmOrderVController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfirmOrderVController.h; sourceTree = "<group>"; };
 		E9E453492234953E00A0A561 /* ConfirmOrderVController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfirmOrderVController.m; sourceTree = "<group>"; };
 		E9E4534A2234953E00A0A561 /* ConfirmOrderVController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfirmOrderVController.xib; sourceTree = "<group>"; };
@@ -303,6 +306,8 @@
 			isa = PBXGroup;
 			children = (
 				E9F6C6F12230AC5100F78CF3 /* PrefixHeader.pch */,
+				E9D25A50224544DC00B65E29 /* PublicMethod.h */,
+				E9D25A51224544DC00B65E29 /* PublicMethod.m */,
 			);
 			path = Public;
 			sourceTree = "<group>";
@@ -515,6 +520,7 @@
 				E9FE7725223C882E00E82488 /* MyViewController.m in Sources */,
 				E9BE7C3D221E251D007DA83B /* main.m in Sources */,
 				E9FE7709223C7AEA00E82488 /* AddressViewController.m in Sources */,
+				E9D25A52224544DC00B65E29 /* PublicMethod.m in Sources */,
 				E9F6C6F62230B04500F78CF3 /* DrinkTableViewCell.m in Sources */,
 				E9E4534B2234953E00A0A561 /* ConfirmOrderVController.m in Sources */,
 				E9BE7C2F221E251C007DA83B /* AppDelegate.m in Sources */,
