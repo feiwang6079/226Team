@@ -1,35 +1,26 @@
 package com.cmpe226.cafe;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import java.sql.*;
-import java.util.Scanner;
-import com.mysql.cj.jdbc.Driver;
+import org.springframework.jdbc.core.JdbcTemplate;
+import lombok.extern.slf4j.Slf4j;
+
+import javax.activation.DataSource;
+import java.sql.Connection;
+import java.sql.SQLException;
 
 @SpringBootApplication
 public class CafeApplication {
 
-    public static void main(String[] args) throws SQLException{
-//        SpringApplication.run(CafeApplication.class, args);
-        String url = "jdbc:mysql://localhost:3306/cafe";
-        String user = "root";
-        String password = "272716";
-        Connection myconn;
-        try  {
-            myconn = DriverManager.getConnection(url, user, password);
 
 
-            Statement mystatement = myconn.createStatement();
-
-            ResultSet rs = mystatement.executeQuery("Select * from orders");
-            System.out.println("orders dispaly all");
-            while (rs.next()) {
-                System.out.println(rs.getString("order_id"));
-            }
-
-        }catch (SQLException e){};
+    public static void main(String[] args) {
+        SpringApplication.run(CafeApplication.class, args);
 
 
     }
+
+
 
 }

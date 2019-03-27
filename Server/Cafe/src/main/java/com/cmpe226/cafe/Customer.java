@@ -1,16 +1,18 @@
 package com.cmpe226.cafe;
 
-public class User {
+public class Customer {
     private String cus_id;
     private String password;
     private int points;
     private int account_balance;
 
-    public User(String cus_id, String password) {
+    public Customer(String cus_id, String password) {
         this.cus_id = cus_id;
         this.password = password;
         this.points = 0;
         this. account_balance = 0;
+    }
+    public Customer() {
     }
 
     public String getCus_id() {

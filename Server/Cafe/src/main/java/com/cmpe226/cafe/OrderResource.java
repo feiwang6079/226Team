@@ -9,33 +9,11 @@ public class OrderResource {
     private long nextId = 0;
 
     public OrderResource(){
-        // generating 3 fake order
-        Orders order;
-        long order_id;
 
-        order = new Orders(
-                5,
-                "Preparing"
-        );
-        order_id = create(order);
-        order.setOrder_id(order_id);
-
-        order = new Orders(
-                12,
-                "Ready"
-        );
-        order_id = create(order);
-        order.setOrder_id(order_id);
-
-        order = new Orders(
-                8,
-                "Paid"
-        );
-        order_id = create(order);
-        order.setOrder_id(order_id);
     }
 
     public Orders get(long id) {
+
         return orders.get(id);
     }
 

@@ -1,7 +1,6 @@
 package com.cmpe226.cafe.service;
 
 import com.cmpe226.cafe.Orders;
-import com.cmpe226.cafe.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
