@@ -11,13 +11,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import javax.activation.DataSource;
 @Repository
+@Service
 public class CustomerResource {
 
     @Autowired
-    JdbcTemplate jdbcTemplate;
+    public JdbcTemplate jdbcTemplate;
+//    @Autowired
+//    DataSource dataSource;
 
     private Map<String, Customer> users = new HashMap<String, Customer>();
     private long nextId = 0;
@@ -30,13 +34,13 @@ public class CustomerResource {
 //    }
 
     public Customer get(String id) {
-        jdbcTemplate.execute("insert into customer values('1203456780', 234, 423.2, '25f9e794323b453885f5181f1b624d0b');\n");
-
         String sql = "select * from customer where cus_id = '" + id + "'";
-        System.out.println(sql);
-        System.out.println(jdbcTemplate);
-        Customer customer = jdbcTemplate.queryForObject(sql, Customer.class);
 
+        //Customer customer = jdbcTemplate.queryForObject(sql, Customer.class);
+        Customer customer = (Customer)jdbcTemplate.queryForObject(
+                sql, new Object[] {  },
+                new BeanPropertyRowMapper(Customer.class));
+        System.out.println(customer);
         return customer;
 
     }
@@ -71,11 +75,11 @@ public class CustomerResource {
 //        users.put(id, user);
 //    }
 
-//    public User login(String id, String password) {
-//        User user = users.get(id);
-//        if (user.getPassword().equals(password)) {
-//            return user;
-//        }
-//        return null;
-//    }
+    public Customer login(String id, String password) {
+        Customer user = users.get(id);
+        if (user.getPassword().equals(password)) {
+            return user;
+        }
+        return null;
+    }
 }

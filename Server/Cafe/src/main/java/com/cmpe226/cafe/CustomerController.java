@@ -1,6 +1,7 @@
 package com.cmpe226.cafe;
 
 //import com.cmpe226.cafe.web.UserRowMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
@@ -9,7 +10,9 @@ import java.util.List;
 @RestController
 public class CustomerController {
 
-    CustomerResource customerResource = new CustomerResource();
+//    CustomerResource customerResource = new CustomerResource();
+    @Autowired
+    CustomerResource customerResource;
     //UserRowMapper userRowMapper = new UserRowMapper();
     @GetMapping("/users")
     public Customer users (

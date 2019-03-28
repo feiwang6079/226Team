@@ -15,6 +15,11 @@ public class Customer {
     public Customer() {
     }
 
+    @Override
+    public String toString() {
+        return getCus_id() +"   " + getAccount_balance() + getPoints();
+    }
+
     public String getCus_id() {
         return cus_id;
     }
