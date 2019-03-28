@@ -1,6 +1,6 @@
 package com.cmpe226.cafe;
 
-import com.cmpe226.cafe.web.UserRowMapper;
+//import com.cmpe226.cafe.web.UserRowMapper;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
@@ -9,8 +9,8 @@ import java.util.List;
 @RestController
 public class CustomerController {
 
-    //CustomerResource userResource = new CustomerResource();
-    UserRowMapper userRowMapper = new UserRowMapper();
+    CustomerResource customerResource = new CustomerResource();
+    //UserRowMapper userRowMapper = new UserRowMapper();
     @GetMapping("/users")
     public Customer users (
             @RequestParam(value="q", defaultValue = "") String request,
@@ -24,7 +24,7 @@ public class CustomerController {
         if (request.equals("login")) {
             System.out.println(" login!");
             //User user = userResource.login(username, password);
-            Customer user = userRowMapper.login(username, password);
+            Customer user = customerResource.get(username);
             return user;
         }
         return null;

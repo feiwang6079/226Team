@@ -10,9 +10,17 @@ logging:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/cafe?useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://localhost:3306/cafe?autoreconnect = true
     username: root
     password: 272716
+    testOnBorrow: true
+    testWhileIdle: true
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 30000
+    validationQuery: SELECT 1
+    max-active: 15
+    max-idle: 10
+    max-wait: 8000
     jpa:
     hibernate:
       ddl-auto: update
