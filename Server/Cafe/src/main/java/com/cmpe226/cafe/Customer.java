@@ -1,18 +1,28 @@
 package com.cmpe226.cafe;
 
-public class Customer {
-    private String cus_id;
-    private String password;
-    private int points;
-    private int account_balance;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
-    public Customer(String cus_id, String password) {
-        this.cus_id = cus_id;
+@Entity
+public class Customer {
+    @Id
+    private long cus_id;
+    private String password;
+    private double points;
+    private double account_balance;
+
+    public Customer( String password, double points, double account_balance) {
+
         this.password = password;
-        this.points = 0;
-        this. account_balance = 0;
+        this.points = points;
+        this. account_balance = account_balance;
     }
+
     public Customer() {
+    }
+
+    public Customer(long cus_id){
+        this.cus_id = cus_id;
     }
 
     @Override
@@ -20,11 +30,11 @@ public class Customer {
         return getCus_id() +"   " + getAccount_balance() + getPoints();
     }
 
-    public String getCus_id() {
+    public long getCus_id() {
         return cus_id;
     }
 
-    public void setCus_id(String cus_id) {
+    public void setCus_id(long cus_id) {
         this.cus_id = cus_id;
     }
 
@@ -36,19 +46,19 @@ public class Customer {
         this.password = password;
     }
 
-    public int getPoints() {
+    public double getPoints() {
         return points;
     }
 
-    public void setPoints(int points) {
+    public void setPoints(double points) {
         this.points = points;
     }
 
-    public int getAccount_balance() {
+    public double getAccount_balance() {
         return account_balance;
     }
 
-    public void setAccount_balance(int account_balance) {
+    public void setAccount_balance(double account_balance) {
         this.account_balance = account_balance;
     }
 }
