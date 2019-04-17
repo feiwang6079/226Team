@@ -38,7 +38,7 @@ public class CustomerResource {
 
         //Customer customer = jdbcTemplate.queryForObject(sql, Customer.class);
         Customer customer = (Customer)jdbcTemplate.queryForObject(
-                sql, new Object[] {  },
+                sql, new Object[] { },
                 new BeanPropertyRowMapper(Customer.class));
         System.out.println(customer);
         return customer;
