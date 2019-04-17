@@ -26,17 +26,26 @@
     // Override point for customization after application launch.
     
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
-//    LoginViewController *vc = [[LoginViewController alloc]init];
-//    [self.window setRootViewController:vc];
-    self.window.backgroundColor = [UIColor whiteColor];
     
-    tabBarController = [[MyTabViewController alloc]  init];
-    [self.window setRootViewController:tabBarController];
-
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    if([userDefaults objectForKey:USERTOKEN]){
+        [self addRootViewController];
+    }else{
+        LoginViewController *vc = [[LoginViewController alloc]init];
+        [self.window setRootViewController:vc];
+    }
+    self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 
+    NSNotificationCenter  * notificationCenter = [ NSNotificationCenter  defaultCenter];
+    [notificationCenter addObserver:self  selector: @selector(addRootViewController) name:LOGINSUCCESS object: nil];
     
     return YES;
+}
+
+-(void)addRootViewController{
+    tabBarController = [[MyTabViewController alloc]  init];
+    [self.window setRootViewController:tabBarController];
 }
 
 

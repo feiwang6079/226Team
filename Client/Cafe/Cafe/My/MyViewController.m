@@ -7,8 +7,13 @@
 //
 
 #import "MyViewController.h"
+#import "NetworkManager.h"
+#import "SVProgressHUD.h"
 
 @interface MyViewController ()
+
+@property (weak, nonatomic) IBOutlet UILabel *moneyLabel;
+
 
 @end
 
@@ -20,6 +25,34 @@
     
     self.title = @"My";
 }
+
+- (IBAction)addButtonPressed:(id)sender {
+    
+    [[NetworkManager sharedNetworkManager] getWithUrlString:[NSString stringWithFormat:@"%@users",URL] parameters:@"" success:^(id response){
+        NSLog(@"%@", response);
+
+        
+//        ServerResult *result = [ServerResult yy_modelWithDictionary:response];
+//        if(result.code != 200){
+//            [SVProgressHUD showErrorWithStatus:result.message];
+//        }else{
+//            NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+//            [user setObject:result.data forKey:USERTOKEN];
+//            [user synchronize];
+//
+//            NSNotification *notification = [NSNotification notificationWithName:LOGINSUCCESS object:nil];
+//            [[NSNotificationCenter defaultCenter] postNotification:notification];
+//        }
+        
+        
+
+    } failure:^(NSError *error){
+        NSLog(@"%@", error);
+        [SVProgressHUD showErrorWithStatus: error.localizedDescription];
+    }];
+    
+}
+
 
 /*
 #pragma mark - Navigation
