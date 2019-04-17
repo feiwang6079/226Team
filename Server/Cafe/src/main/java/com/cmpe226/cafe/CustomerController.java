@@ -62,6 +62,16 @@ public class CustomerController {
         return customerService.review(cus_id);
     }
 
+    @GetMapping("/user")
+    public Message review(@RequestParam String cus_id, @RequestParam String password){
+        Customer c =  customerService.review(cus_id);
+        if(c != null && c.getPassword().equals(password)) {
+            return new Message(200, "Success", c.toString());
+        }else {
+            return new Message(401, "Wrong password", "");
+        }
+    }
+
     @PostMapping("/saveCustomer")
     public Customer saveCustomer(//@RequestParam long cus_id,
                                  @RequestParam String password,

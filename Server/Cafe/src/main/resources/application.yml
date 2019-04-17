@@ -10,9 +10,9 @@ logging:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: "jdbc:mysql://localhost:3306/cafe?useLegacyDatetimeCode=false&serverTimezone = PST8PDT&autoreconnect = true"
-    username: "root"
-    password: "272716"
+    url: "jdbc:mysql://34.213.96.231:3306/cafe?useLegacyDatetimeCode=false&serverTimezone = PST8PDT&autoreconnect = true"
+    username: "remoteUser"
+    password: "19911223"
     testOnBorrow: true
     testWhileIdle: true
     timeBetweenEvictionRunsMillis: 60000

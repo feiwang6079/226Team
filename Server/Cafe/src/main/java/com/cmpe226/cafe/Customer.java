@@ -1,5 +1,7 @@
 package com.cmpe226.cafe;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -27,7 +29,12 @@ public class Customer {
 
     @Override
     public String toString() {
-        return getCus_id() +"   " + getAccount_balance() + getPoints();
+        ObjectMapper mapper = new ObjectMapper();
+        try {
+            return mapper.writeValueAsString(this);
+        } catch (Exception e) {
+            return "";
+        }
     }
 
     public long getCus_id() {
