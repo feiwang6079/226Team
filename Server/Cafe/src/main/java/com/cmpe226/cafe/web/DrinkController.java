@@ -13,22 +13,18 @@ public class DrinkController {
     @Autowired
     DrinkService drinkService;
 
-    @PostMapping("/saveDrink")
+    @PostMapping("/drinks")
     public Drink save(
-                      @RequestParam String ice_level,
-                      @RequestParam String sugar_level,
-                      @RequestParam double price,
-                      @RequestParam String emp_id,
-                      @RequestParam String tea_name){
+                      @RequestParam String json){
 //       Drink drink = new Drink(drink_id, ice_level,sugar,
 //               price, emp_id, tea_name);
         Drink drink = new Drink();
-        //drink.setDrink_id(drink_id);
-        drink.setEmp_id(emp_id);
-        drink.setIce_level(ice_level);
-        drink.setPrice(price);
-        drink.setSugar_level(sugar_level);
-        drink.setTea_name(tea_name);
+//        //drink.setDrink_id(drink_id);
+//        drink.setEmp_id(emp_id);
+//        drink.setIce_level(ice_level);
+//        drink.setPrice(price);
+//        drink.setSugar_level(sugar_level);
+//        drink.setTea_name(tea_name);
         return drinkService.save(drink);
     }
 }

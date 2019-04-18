@@ -15,7 +15,7 @@ public class TeaController {
     @Autowired
     TeaRowMapper teaRowMapper;
 
-    @GetMapping("/listAllTea")
+    @GetMapping("/tea")
     public Message listAllTea(){
 
         List<Tea> teas = teaRowMapper.findAllTea();

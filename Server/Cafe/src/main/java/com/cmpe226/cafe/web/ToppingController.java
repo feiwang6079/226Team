@@ -15,7 +15,7 @@ public class ToppingController {
 
     @Autowired
     ToppingRowMapper toppingRowMapper;
-    @GetMapping("/listAllToppings")
+    @GetMapping("/toppings")
     public Message listAllToppings(){
         List<Topping> result = toppingRowMapper.findAllTps();
 
