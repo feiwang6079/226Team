@@ -50,16 +50,31 @@ public class CustomerController {
        return customerService.payByBalance(cus_id,total_price);
     }
 
-    @PostMapping("/topUp")
-    public int topUp(@RequestParam String cus_id,
+    @GetMapping("/topup")
+    public Message topUp(@RequestParam String cus_id,
                      @RequestParam double value){
 
-        return customerService.topUp(cus_id, value);
+        int result = customerService.topUp(cus_id, value);
+        if (result == 1) {
+            return new Message(200, "Success", "");
+        } else {
+            return new Message(400, "Failed", "");
+        }
     }
 
     @GetMapping("/review")
     public Customer review(@RequestParam String cus_id){
         return customerService.review(cus_id);
+    }
+
+    @GetMapping("/user")
+    public Message review(@RequestParam String cus_id, @RequestParam String password){
+        Customer c =  customerService.review(cus_id);
+        if(c != null && c.getPassword().toLowerCase().equals(password.toLowerCase())) {
+            return new Message(200, "Success", c.toString());
+        }else {
+            return new Message(401, "Wrong password", "");
+        }
     }
 
     @PostMapping("/saveCustomer")
