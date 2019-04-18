@@ -4218,3 +4218,456 @@ java.lang.NullPointerException: null
 2019-04-17 16:40:27.157  INFO 67561 --- [RMI TCP Connection(1)-10.250.84.79] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2019-04-17 16:40:27.157  INFO 67561 --- [RMI TCP Connection(1)-10.250.84.79] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2019-04-17 16:40:27.164  INFO 67561 --- [RMI TCP Connection(1)-10.250.84.79] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2019-04-17 16:51:52.421  INFO 67561 --- [Thread-13] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-04-17 16:51:52.425  INFO 67561 --- [Thread-13] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-04-17 16:51:52.427  INFO 67561 --- [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-04-17 16:51:52.433  INFO 67561 --- [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-04-17 16:51:55.460  INFO 67873 --- [main] com.cmpe226.cafe.CafeApplication         : Starting CafeApplication on Wills-MacBook-Pro-4.local with PID 67873 (/Users/will/Projects/git/226Team/Server/Cafe/target/classes started by will in /Users/will/Projects/git/226Team/Server/Cafe)
+2019-04-17 16:51:55.463 DEBUG 67873 --- [main] com.cmpe226.cafe.CafeApplication         : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-04-17 16:51:55.464  INFO 67873 --- [main] com.cmpe226.cafe.CafeApplication         : No active profile set, falling back to default profiles: default
+2019-04-17 16:51:56.123  INFO 67873 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-17 16:51:56.184  INFO 67873 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54ms. Found 4 repository interfaces.
+2019-04-17 16:51:56.483  INFO 67873 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$240da921] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-17 16:51:56.726  INFO 67873 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-04-17 16:51:56.743  INFO 67873 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-17 16:51:56.744  INFO 67873 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-04-17 16:51:56.749  INFO 67873 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/will/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-04-17 16:51:56.819  INFO 67873 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-04-17 16:51:56.819  INFO 67873 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1323 ms
+2019-04-17 16:51:57.220  INFO 67873 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-04-17 16:51:57.594  INFO 67873 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-04-17 16:51:57.635  INFO 67873 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-04-17 16:51:57.680  INFO 67873 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-04-17 16:51:57.681  INFO 67873 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-04-17 16:51:57.772  INFO 67873 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-04-17 16:51:57.888  INFO 67873 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-04-17 16:51:58.418  INFO 67873 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-04-17 16:51:58.640  INFO 67873 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-04-17 16:51:58.931  INFO 67873 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-17 16:51:58.958  WARN 67873 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-04-17 16:51:59.203  INFO 67873 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-04-17 16:51:59.285  INFO 67873 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-04-17 16:51:59.287  INFO 67873 --- [main] com.cmpe226.cafe.CafeApplication         : Started CafeApplication in 4.139 seconds (JVM running for 4.823)
+2019-04-17 16:51:59.774  INFO 67873 --- [RMI TCP Connection(3)-10.251.242.86] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-04-17 16:51:59.774  INFO 67873 --- [RMI TCP Connection(3)-10.251.242.86] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-04-17 16:51:59.781  INFO 67873 --- [RMI TCP Connection(3)-10.251.242.86] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2019-04-17 16:54:15.178  WARN 67873 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3ebbfdfd (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2019-04-17 16:54:20.186  WARN 67873 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@36d6e1d6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2019-04-17 16:54:21.386  WARN 67873 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1054644b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2019-04-17 16:54:25.188  WARN 67873 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6f448b80 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2019-04-17 16:54:26.391  WARN 67873 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@146be299 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2019-04-17 16:54:30.190  WARN 67873 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7c869c54 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2019-04-17 16:54:31.399  WARN 67873 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@51696e70 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2019-04-17 16:54:32.824  INFO 67873 --- [Thread-13] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-04-17 16:54:32.826  INFO 67873 --- [Thread-13] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-04-17 16:54:32.830  INFO 67873 --- [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-04-17 16:54:34.073  INFO 67873 --- [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-04-17 16:54:34.074  WARN 67873 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@53b77975 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2019-04-17 16:54:34.074  WARN 67873 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7d5f0a43 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2019-04-17 16:54:36.242  WARN 67873 --- [http-nio-8080-exec-2] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2019-04-17 16:54:36.242  WARN 67873 --- [http-nio-8080-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2019-04-17 16:54:36.242 ERROR 67873 --- [http-nio-8080-exec-2] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Interrupted during connection acquisition
+2019-04-17 16:54:36.242 ERROR 67873 --- [http-nio-8080-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Interrupted during connection acquisition
+2019-04-17 16:54:36.286  INFO 67873 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2019-04-17 16:54:38.712  INFO 67873 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2019-04-17 16:54:38.727 ERROR 67873 --- [http-nio-8080-exec-1] o.s.web.servlet.HandlerExecutionChain    : HandlerInterceptor.afterCompletion threw exception
+
+java.lang.NullPointerException: null
+	at org.springframework.boot.actuate.metrics.web.servlet.LongTaskTimingHandlerInterceptor.stopLongTaskTimers(LongTaskTimingHandlerInterceptor.java:123) ~[spring-boot-actuator-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.actuate.metrics.web.servlet.LongTaskTimingHandlerInterceptor.afterCompletion(LongTaskTimingHandlerInterceptor.java:78) ~[spring-boot-actuator-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.web.servlet.HandlerExecutionChain.triggerAfterCompletion(HandlerExecutionChain.java:174) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.triggerAfterCompletion(DispatcherServlet.java:1424) [spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1058) [spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) [spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) [spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897) [spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) [spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.boot.actuate.web.trace.servlet.HttpTraceFilter.doFilterInternal(HttpTraceFilter.java:90) [spring-boot-actuator-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) [spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92) [spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) [spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.filterAndRecordMetrics(WebMvcMetricsFilter.java:117) [spring-boot-actuator-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:106) [spring-boot-actuator-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) [spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_201]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_201]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_201]
+
+2019-04-17 16:54:38.727 ERROR 67873 --- [http-nio-8080-exec-2] o.s.web.servlet.HandlerExecutionChain    : HandlerInterceptor.afterCompletion threw exception
+
+java.lang.NullPointerException: null
+	at org.springframework.boot.actuate.metrics.web.servlet.LongTaskTimingHandlerInterceptor.stopLongTaskTimers(LongTaskTimingHandlerInterceptor.java:123) ~[spring-boot-actuator-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.actuate.metrics.web.servlet.LongTaskTimingHandlerInterceptor.afterCompletion(LongTaskTimingHandlerInterceptor.java:78) ~[spring-boot-actuator-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.web.servlet.HandlerExecutionChain.triggerAfterCompletion(HandlerExecutionChain.java:174) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.triggerAfterCompletion(DispatcherServlet.java:1424) [spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1058) [spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) [spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) [spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897) [spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) [spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.boot.actuate.web.trace.servlet.HttpTraceFilter.doFilterInternal(HttpTraceFilter.java:90) [spring-boot-actuator-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) [spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92) [spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) [spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.filterAndRecordMetrics(WebMvcMetricsFilter.java:117) [spring-boot-actuator-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:106) [spring-boot-actuator-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) [spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_201]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_201]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_201]
+
+2019-04-17 16:54:40.452  INFO 67908 --- [main] com.cmpe226.cafe.CafeApplication         : Starting CafeApplication on Wills-MacBook-Pro-4.local with PID 67908 (/Users/will/Projects/git/226Team/Server/Cafe/target/classes started by will in /Users/will/Projects/git/226Team/Server/Cafe)
+2019-04-17 16:54:40.454 DEBUG 67908 --- [main] com.cmpe226.cafe.CafeApplication         : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-04-17 16:54:40.455  INFO 67908 --- [main] com.cmpe226.cafe.CafeApplication         : No active profile set, falling back to default profiles: default
+2019-04-17 16:54:41.100  INFO 67908 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-17 16:54:41.153  INFO 67908 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48ms. Found 4 repository interfaces.
+2019-04-17 16:54:41.449  INFO 67908 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$bf85bd24] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-17 16:54:41.689  INFO 67908 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-04-17 16:54:41.706  INFO 67908 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-17 16:54:41.706  INFO 67908 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-04-17 16:54:41.711  INFO 67908 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/will/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-04-17 16:54:41.783  INFO 67908 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-04-17 16:54:41.783  INFO 67908 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1297 ms
+2019-04-17 16:54:42.185  INFO 67908 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-04-17 16:54:44.873  INFO 67908 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-04-17 16:54:44.914  INFO 67908 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-04-17 16:54:44.956  INFO 67908 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-04-17 16:54:44.957  INFO 67908 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-04-17 16:54:45.040  INFO 67908 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-04-17 16:54:45.139  INFO 67908 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-04-17 16:54:45.656  INFO 67908 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-04-17 16:54:46.055  INFO 67908 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-04-17 16:54:46.332  INFO 67908 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-17 16:54:46.360  WARN 67908 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-04-17 16:54:46.596  INFO 67908 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-04-17 16:54:46.667  INFO 67908 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-04-17 16:54:46.670  INFO 67908 --- [main] com.cmpe226.cafe.CafeApplication         : Started CafeApplication in 6.612 seconds (JVM running for 7.32)
+2019-04-17 16:54:47.053  INFO 67908 --- [RMI TCP Connection(3)-172.20.10.5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-04-17 16:54:47.053  INFO 67908 --- [RMI TCP Connection(3)-172.20.10.5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-04-17 16:54:47.061  INFO 67908 --- [RMI TCP Connection(3)-172.20.10.5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2019-04-17 17:02:26.502  INFO 67908 --- [Thread-18] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-04-17 17:02:26.504  INFO 67908 --- [Thread-18] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-04-17 17:02:26.506  INFO 67908 --- [Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-04-17 17:02:26.510  INFO 67908 --- [Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-04-17 17:02:30.660  INFO 67968 --- [main] com.cmpe226.cafe.CafeApplication         : Starting CafeApplication on Wills-MacBook-Pro-4.local with PID 67968 (/Users/will/Projects/git/226Team/Server/Cafe/target/classes started by will in /Users/will/Projects/git/226Team/Server/Cafe)
+2019-04-17 17:02:30.662 DEBUG 67968 --- [main] com.cmpe226.cafe.CafeApplication         : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-04-17 17:02:30.663  INFO 67968 --- [main] com.cmpe226.cafe.CafeApplication         : No active profile set, falling back to default profiles: default
+2019-04-17 17:02:31.364  INFO 67968 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-17 17:02:31.440  INFO 67968 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69ms. Found 4 repository interfaces.
+2019-04-17 17:02:31.825  INFO 67968 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$18662442] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-17 17:02:32.148  INFO 67968 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-04-17 17:02:32.174  INFO 67968 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-17 17:02:32.174  INFO 67968 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-04-17 17:02:32.185  INFO 67968 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/will/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-04-17 17:02:32.263  INFO 67968 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-04-17 17:02:32.264  INFO 67968 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1576 ms
+2019-04-17 17:02:33.025  INFO 67968 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-04-17 17:02:39.615  INFO 67972 --- [main] com.cmpe226.cafe.CafeApplication         : Starting CafeApplication on Wills-MacBook-Pro-4.local with PID 67972 (/Users/will/Projects/git/226Team/Server/Cafe/target/classes started by will in /Users/will/Projects/git/226Team/Server/Cafe)
+2019-04-17 17:02:39.616 DEBUG 67972 --- [main] com.cmpe226.cafe.CafeApplication         : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-04-17 17:02:39.617  INFO 67972 --- [main] com.cmpe226.cafe.CafeApplication         : No active profile set, falling back to default profiles: default
+2019-04-17 17:02:40.260  INFO 67972 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-17 17:02:40.313  INFO 67972 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47ms. Found 4 repository interfaces.
+2019-04-17 17:02:40.609  INFO 67972 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$18662442] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-17 17:02:40.841  INFO 67972 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-04-17 17:02:40.859  INFO 67972 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-17 17:02:40.859  INFO 67972 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-04-17 17:02:40.864  INFO 67972 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/will/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-04-17 17:02:40.926  INFO 67972 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-04-17 17:02:40.926  INFO 67972 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1283 ms
+2019-04-17 17:02:41.323  INFO 67972 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-04-17 17:02:43.379  INFO 67972 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-04-17 17:02:43.417  INFO 67972 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-04-17 17:02:43.460  INFO 67972 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-04-17 17:02:43.461  INFO 67972 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-04-17 17:02:43.542  INFO 67972 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-04-17 17:02:43.638  INFO 67972 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-04-17 17:02:44.161  INFO 67972 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-04-17 17:02:44.524  INFO 67972 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-04-17 17:02:44.792  INFO 67972 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-17 17:02:44.817  WARN 67972 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-04-17 17:02:45.036  INFO 67972 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-04-17 17:02:45.108  INFO 67972 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-04-17 17:02:45.110  INFO 67972 --- [main] com.cmpe226.cafe.CafeApplication         : Started CafeApplication in 5.794 seconds (JVM running for 6.277)
+2019-04-17 17:02:45.616  INFO 67972 --- [RMI TCP Connection(1)-172.20.10.5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-04-17 17:02:45.616  INFO 67972 --- [RMI TCP Connection(1)-172.20.10.5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-04-17 17:02:45.623  INFO 67972 --- [RMI TCP Connection(1)-172.20.10.5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2019-04-17 17:09:02.071  WARN 67972 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@68471e1e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2019-04-17 17:09:02.141  WARN 67972 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@64b0a44 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2019-04-17 17:09:02.210  WARN 67972 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@56ac537d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2019-04-17 17:09:02.293  WARN 67972 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5ed67370 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2019-04-17 17:09:02.346  WARN 67972 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@73450ade (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2019-04-17 17:09:02.401  WARN 67972 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2d0227d8 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2019-04-17 17:09:02.452  WARN 67972 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1901bebe (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2019-04-17 17:09:02.501  WARN 67972 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@74a1131d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2019-04-17 17:09:02.581  WARN 67972 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2f69f4ad (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2019-04-17 17:09:02.700  WARN 67972 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@13e93a7f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2019-04-17 17:09:24.268  INFO 67972 --- [Thread-16] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-04-17 17:09:24.269  INFO 67972 --- [Thread-16] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-04-17 17:09:24.271  INFO 67972 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-04-17 17:09:24.276  INFO 67972 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-04-17 17:09:28.407  INFO 68055 --- [main] com.cmpe226.cafe.CafeApplication         : Starting CafeApplication on Wills-MacBook-Pro-4.local with PID 68055 (/Users/will/Projects/git/226Team/Server/Cafe/target/classes started by will in /Users/will/Projects/git/226Team/Server/Cafe)
+2019-04-17 17:09:28.409 DEBUG 68055 --- [main] com.cmpe226.cafe.CafeApplication         : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-04-17 17:09:28.412  INFO 68055 --- [main] com.cmpe226.cafe.CafeApplication         : No active profile set, falling back to default profiles: default
+2019-04-17 17:09:29.040  INFO 68055 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-17 17:09:29.096  INFO 68055 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51ms. Found 4 repository interfaces.
+2019-04-17 17:09:29.356  INFO 68055 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8ef375a4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-17 17:09:29.594  INFO 68055 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-04-17 17:09:29.610  INFO 68055 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-17 17:09:29.610  INFO 68055 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-04-17 17:09:29.614  INFO 68055 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/will/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-04-17 17:09:29.672  INFO 68055 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-04-17 17:09:29.673  INFO 68055 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1225 ms
+2019-04-17 17:09:30.059  INFO 68055 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-04-17 17:09:32.169  INFO 68055 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-04-17 17:09:32.209  INFO 68055 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-04-17 17:09:32.251  INFO 68055 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-04-17 17:09:32.253  INFO 68055 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-04-17 17:09:32.332  INFO 68055 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-04-17 17:09:32.430  INFO 68055 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-04-17 17:09:32.921  INFO 68055 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-04-17 17:09:33.089  INFO 68055 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-04-17 17:09:33.355  INFO 68055 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-17 17:09:33.380  WARN 68055 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-04-17 17:09:33.603  INFO 68055 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-04-17 17:09:33.673  INFO 68055 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-04-17 17:09:33.675  INFO 68055 --- [main] com.cmpe226.cafe.CafeApplication         : Started CafeApplication in 5.577 seconds (JVM running for 6.248)
+2019-04-17 17:09:33.748  INFO 68055 --- [RMI TCP Connection(3)-172.20.10.5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-04-17 17:09:33.748  INFO 68055 --- [RMI TCP Connection(3)-172.20.10.5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-04-17 17:09:33.754  INFO 68055 --- [RMI TCP Connection(3)-172.20.10.5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2019-04-17 17:11:53.449  INFO 68055 --- [Thread-15] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-04-17 17:11:53.451  INFO 68055 --- [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-04-17 17:11:53.453  INFO 68055 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-04-17 17:11:53.456  INFO 68055 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-04-17 17:12:02.480  INFO 68065 --- [main] com.cmpe226.cafe.CafeApplication         : Starting CafeApplication on Wills-MacBook-Pro-4.local with PID 68065 (/Users/will/Projects/git/226Team/Server/Cafe/target/classes started by will in /Users/will/Projects/git/226Team/Server/Cafe)
+2019-04-17 17:12:02.483 DEBUG 68065 --- [main] com.cmpe226.cafe.CafeApplication         : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-04-17 17:12:02.484  INFO 68065 --- [main] com.cmpe226.cafe.CafeApplication         : No active profile set, falling back to default profiles: default
+2019-04-17 17:12:03.103  INFO 68065 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-17 17:12:03.157  INFO 68065 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49ms. Found 4 repository interfaces.
+2019-04-17 17:12:03.406  INFO 68065 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$782ac032] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-17 17:12:03.642  INFO 68065 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-04-17 17:12:03.658  INFO 68065 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-17 17:12:03.659  INFO 68065 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-04-17 17:12:03.664  INFO 68065 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/will/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-04-17 17:12:03.732  INFO 68065 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-04-17 17:12:03.732  INFO 68065 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1216 ms
+2019-04-17 17:12:04.115  INFO 68065 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-04-17 17:12:23.778  INFO 68070 --- [main] com.cmpe226.cafe.CafeApplication         : Starting CafeApplication on Wills-MacBook-Pro-4.local with PID 68070 (/Users/will/Projects/git/226Team/Server/Cafe/target/classes started by will in /Users/will/Projects/git/226Team/Server/Cafe)
+2019-04-17 17:12:23.780 DEBUG 68070 --- [main] com.cmpe226.cafe.CafeApplication         : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-04-17 17:12:23.780  INFO 68070 --- [main] com.cmpe226.cafe.CafeApplication         : No active profile set, falling back to default profiles: default
+2019-04-17 17:12:24.459  INFO 68070 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-17 17:12:24.511  INFO 68070 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47ms. Found 4 repository interfaces.
+2019-04-17 17:12:24.801  INFO 68070 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ff82c620] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-17 17:12:25.029  INFO 68070 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-04-17 17:12:25.047  INFO 68070 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-17 17:12:25.047  INFO 68070 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-04-17 17:12:25.052  INFO 68070 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/will/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-04-17 17:12:25.114  INFO 68070 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-04-17 17:12:25.114  INFO 68070 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1302 ms
+2019-04-17 17:12:25.507  INFO 68070 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-04-17 17:12:27.185  INFO 68070 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-04-17 17:12:27.225  INFO 68070 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-04-17 17:12:27.267  INFO 68070 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-04-17 17:12:27.268  INFO 68070 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-04-17 17:12:27.348  INFO 68070 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-04-17 17:12:27.443  INFO 68070 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-04-17 17:12:27.931  INFO 68070 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-04-17 17:12:28.108  INFO 68070 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-04-17 17:12:28.383  INFO 68070 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-17 17:12:28.409  WARN 68070 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-04-17 17:12:28.641  INFO 68070 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-04-17 17:12:28.717  INFO 68070 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-04-17 17:12:28.720  INFO 68070 --- [main] com.cmpe226.cafe.CafeApplication         : Started CafeApplication in 5.247 seconds (JVM running for 5.692)
+2019-04-17 17:12:28.773  INFO 68070 --- [RMI TCP Connection(2)-172.20.10.5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-04-17 17:12:28.773  INFO 68070 --- [RMI TCP Connection(2)-172.20.10.5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-04-17 17:12:28.781  INFO 68070 --- [RMI TCP Connection(2)-172.20.10.5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2019-04-17 17:14:02.777  INFO 68070 --- [Thread-14] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-04-17 17:14:02.779  INFO 68070 --- [Thread-14] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-04-17 17:14:02.781  INFO 68070 --- [Thread-14] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-04-17 17:14:02.786  INFO 68070 --- [Thread-14] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-04-17 17:14:06.847  INFO 68079 --- [main] com.cmpe226.cafe.CafeApplication         : Starting CafeApplication on Wills-MacBook-Pro-4.local with PID 68079 (/Users/will/Projects/git/226Team/Server/Cafe/target/classes started by will in /Users/will/Projects/git/226Team/Server/Cafe)
+2019-04-17 17:14:06.849 DEBUG 68079 --- [main] com.cmpe226.cafe.CafeApplication         : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-04-17 17:14:06.850  INFO 68079 --- [main] com.cmpe226.cafe.CafeApplication         : No active profile set, falling back to default profiles: default
+2019-04-17 17:14:07.478  INFO 68079 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-17 17:14:07.538  INFO 68079 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55ms. Found 4 repository interfaces.
+2019-04-17 17:14:07.833  INFO 68079 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$cf097989] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-17 17:14:08.039  INFO 68079 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-04-17 17:14:08.059  INFO 68079 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-17 17:14:08.059  INFO 68079 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-04-17 17:14:08.064  INFO 68079 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/will/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-04-17 17:14:08.127  INFO 68079 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-04-17 17:14:08.127  INFO 68079 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1244 ms
+2019-04-17 17:14:08.532  INFO 68079 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-04-17 17:14:16.615  INFO 68079 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-04-17 17:14:16.654  INFO 68079 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-04-17 17:14:16.694  INFO 68079 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-04-17 17:14:16.695  INFO 68079 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-04-17 17:14:16.774  INFO 68079 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-04-17 17:14:16.871  INFO 68079 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-04-17 17:14:17.380  INFO 68079 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-04-17 17:14:17.727  INFO 68079 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-04-17 17:14:17.998  INFO 68079 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-17 17:14:18.024  WARN 68079 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-04-17 17:14:18.228  INFO 68079 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-04-17 17:14:18.300  INFO 68079 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-04-17 17:14:18.302  INFO 68079 --- [main] com.cmpe226.cafe.CafeApplication         : Started CafeApplication in 11.771 seconds (JVM running for 12.471)
+2019-04-17 17:14:18.731  INFO 68079 --- [RMI TCP Connection(3)-172.20.10.5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-04-17 17:14:18.731  INFO 68079 --- [RMI TCP Connection(3)-172.20.10.5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-04-17 17:14:18.738  INFO 68079 --- [RMI TCP Connection(3)-172.20.10.5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2019-04-17 17:15:47.754  INFO 68079 --- [Thread-28] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-04-17 17:15:47.756  INFO 68079 --- [Thread-28] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-04-17 17:15:47.758  INFO 68079 --- [Thread-28] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-04-17 17:15:47.763  INFO 68079 --- [Thread-28] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-04-17 17:15:49.551  INFO 68090 --- [main] com.cmpe226.cafe.CafeApplication         : Starting CafeApplication on Wills-MacBook-Pro-4.local with PID 68090 (/Users/will/Projects/git/226Team/Server/Cafe/target/classes started by will in /Users/will/Projects/git/226Team/Server/Cafe)
+2019-04-17 17:15:49.554 DEBUG 68090 --- [main] com.cmpe226.cafe.CafeApplication         : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-04-17 17:15:49.554  INFO 68090 --- [main] com.cmpe226.cafe.CafeApplication         : No active profile set, falling back to default profiles: default
+2019-04-17 17:15:50.224  INFO 68090 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-17 17:15:50.278  INFO 68090 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49ms. Found 4 repository interfaces.
+2019-04-17 17:15:50.601  INFO 68090 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$36a621c8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-17 17:15:50.801  INFO 68090 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-04-17 17:15:50.819  INFO 68090 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-17 17:15:50.819  INFO 68090 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-04-17 17:15:50.825  INFO 68090 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/will/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-04-17 17:15:50.889  INFO 68090 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-04-17 17:15:50.889  INFO 68090 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1307 ms
+2019-04-17 17:15:51.280  INFO 68090 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-04-17 17:15:59.390  INFO 68090 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-04-17 17:15:59.429  INFO 68090 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-04-17 17:15:59.469  INFO 68090 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-04-17 17:15:59.470  INFO 68090 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-04-17 17:15:59.559  INFO 68090 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-04-17 17:15:59.677  INFO 68090 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-04-17 17:16:00.348  INFO 68090 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-04-17 17:16:00.700  INFO 68090 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-04-17 17:16:00.972  INFO 68090 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-17 17:16:01.002  WARN 68090 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-04-17 17:16:01.244  INFO 68090 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-04-17 17:16:01.320  INFO 68090 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-04-17 17:16:01.323  INFO 68090 --- [main] com.cmpe226.cafe.CafeApplication         : Started CafeApplication in 12.188 seconds (JVM running for 12.89)
+2019-04-17 17:16:01.717  INFO 68090 --- [RMI TCP Connection(7)-172.20.10.5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-04-17 17:16:01.717  INFO 68090 --- [RMI TCP Connection(7)-172.20.10.5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-04-17 17:16:01.724  INFO 68090 --- [RMI TCP Connection(7)-172.20.10.5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2019-04-17 17:17:09.085  INFO 68090 --- [Thread-29] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-04-17 17:17:09.087  INFO 68090 --- [Thread-29] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-04-17 17:17:09.089  INFO 68090 --- [Thread-29] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-04-17 17:17:09.094  INFO 68090 --- [Thread-29] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-04-17 17:17:12.876  INFO 68098 --- [main] com.cmpe226.cafe.CafeApplication         : Starting CafeApplication on Wills-MacBook-Pro-4.local with PID 68098 (/Users/will/Projects/git/226Team/Server/Cafe/target/classes started by will in /Users/will/Projects/git/226Team/Server/Cafe)
+2019-04-17 17:17:12.877 DEBUG 68098 --- [main] com.cmpe226.cafe.CafeApplication         : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-04-17 17:17:12.878  INFO 68098 --- [main] com.cmpe226.cafe.CafeApplication         : No active profile set, falling back to default profiles: default
+2019-04-17 17:17:13.566  INFO 68098 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-17 17:17:13.618  INFO 68098 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48ms. Found 4 repository interfaces.
+2019-04-17 17:17:13.902  INFO 68098 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$139cd679] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-17 17:17:14.110  INFO 68098 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-04-17 17:17:14.133  INFO 68098 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-17 17:17:14.133  INFO 68098 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-04-17 17:17:14.138  INFO 68098 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/will/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-04-17 17:17:14.214  INFO 68098 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-04-17 17:17:14.214  INFO 68098 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1309 ms
+2019-04-17 17:17:14.597  INFO 68098 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-04-17 17:17:22.944  INFO 68098 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-04-17 17:17:22.983  INFO 68098 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-04-17 17:17:23.024  INFO 68098 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-04-17 17:17:23.025  INFO 68098 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-04-17 17:17:23.110  INFO 68098 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-04-17 17:17:23.230  INFO 68098 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-04-17 17:17:23.754  INFO 68098 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-04-17 17:17:24.128  INFO 68098 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-04-17 17:17:24.448  INFO 68098 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-17 17:17:24.478  WARN 68098 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-04-17 17:17:24.691  INFO 68098 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-04-17 17:17:24.768  INFO 68098 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-04-17 17:17:24.770  INFO 68098 --- [main] com.cmpe226.cafe.CafeApplication         : Started CafeApplication in 12.188 seconds (JVM running for 12.636)
+2019-04-17 17:17:25.003  INFO 68098 --- [RMI TCP Connection(1)-172.20.10.5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-04-17 17:17:25.003  INFO 68098 --- [RMI TCP Connection(1)-172.20.10.5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-04-17 17:17:25.011  INFO 68098 --- [RMI TCP Connection(1)-172.20.10.5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
