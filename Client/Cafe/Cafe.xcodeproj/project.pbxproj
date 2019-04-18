@@ -9,7 +9,10 @@
 /* Begin PBXBuildFile section */
 		9E0BD1767AB924A85B844B3D /* libPods-Cafe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71814E1A1C09D8463949F4F3 /* libPods-Cafe.a */; };
 		E985FBA92243012800AC206E /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E985FBA82243012800AC206E /* NetworkManager.m */; };
-		E985FBAD22430A8400AC206E /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E985FBAC22430A8400AC206E /* User.m */; };
+		E9A5ADAA2267DF85008F7214 /* ServerResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A5ADA92267DF85008F7214 /* ServerResult.m */; };
+		E9A5ADAD2267EFD4008F7214 /* Customer.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A5ADAC2267EFD4008F7214 /* Customer.m */; };
+		E9A5ADB02267FB71008F7214 /* Address.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A5ADAF2267FB71008F7214 /* Address.m */; };
+		E9A5ADB62268031C008F7214 /* Tea.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A5ADB52268031C008F7214 /* Tea.m */; };
 		E9BE7C2F221E251C007DA83B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9BE7C2E221E251C007DA83B /* AppDelegate.m */; };
 		E9BE7C37221E251D007DA83B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9BE7C36221E251D007DA83B /* Assets.xcassets */; };
 		E9BE7C3A221E251D007DA83B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9BE7C38221E251D007DA83B /* LaunchScreen.storyboard */; };
@@ -71,8 +74,14 @@
 		71814E1A1C09D8463949F4F3 /* libPods-Cafe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Cafe.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E985FBA72243012800AC206E /* NetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
 		E985FBA82243012800AC206E /* NetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
-		E985FBAB22430A8400AC206E /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		E985FBAC22430A8400AC206E /* User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		E9A5ADA82267DF85008F7214 /* ServerResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServerResult.h; sourceTree = "<group>"; };
+		E9A5ADA92267DF85008F7214 /* ServerResult.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServerResult.m; sourceTree = "<group>"; };
+		E9A5ADAB2267EFD4008F7214 /* Customer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Customer.h; sourceTree = "<group>"; };
+		E9A5ADAC2267EFD4008F7214 /* Customer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Customer.m; sourceTree = "<group>"; };
+		E9A5ADAE2267FB71008F7214 /* Address.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Address.h; sourceTree = "<group>"; };
+		E9A5ADAF2267FB71008F7214 /* Address.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Address.m; sourceTree = "<group>"; };
+		E9A5ADB42268031C008F7214 /* Tea.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tea.h; sourceTree = "<group>"; };
+		E9A5ADB52268031C008F7214 /* Tea.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tea.m; sourceTree = "<group>"; };
 		E9BE7C2A221E251C007DA83B /* Cafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9BE7C2D221E251C007DA83B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E9BE7C2E221E251C007DA83B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -191,8 +200,14 @@
 		E985FBAA22430A2600AC206E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E985FBAB22430A8400AC206E /* User.h */,
-				E985FBAC22430A8400AC206E /* User.m */,
+				E9A5ADA82267DF85008F7214 /* ServerResult.h */,
+				E9A5ADA92267DF85008F7214 /* ServerResult.m */,
+				E9A5ADAB2267EFD4008F7214 /* Customer.h */,
+				E9A5ADAC2267EFD4008F7214 /* Customer.m */,
+				E9A5ADAE2267FB71008F7214 /* Address.h */,
+				E9A5ADAF2267FB71008F7214 /* Address.m */,
+				E9A5ADB42268031C008F7214 /* Tea.h */,
+				E9A5ADB52268031C008F7214 /* Tea.m */,
 			);
 			name = Model;
 			path = Cafe/Model;
@@ -514,13 +529,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9A5ADB62268031C008F7214 /* Tea.m in Sources */,
 				E9F6C7032230C1B500F78CF3 /* SelectViewController.m in Sources */,
 				E9BE7C7E221E6DB4007DA83B /* MyTabViewController.m in Sources */,
-				E985FBAD22430A8400AC206E /* User.m in Sources */,
 				E9FE7725223C882E00E82488 /* MyViewController.m in Sources */,
 				E9BE7C3D221E251D007DA83B /* main.m in Sources */,
 				E9FE7709223C7AEA00E82488 /* AddressViewController.m in Sources */,
 				E9D25A52224544DC00B65E29 /* PublicMethod.m in Sources */,
+				E9A5ADAA2267DF85008F7214 /* ServerResult.m in Sources */,
 				E9F6C6F62230B04500F78CF3 /* DrinkTableViewCell.m in Sources */,
 				E9E4534B2234953E00A0A561 /* ConfirmOrderVController.m in Sources */,
 				E9BE7C2F221E251C007DA83B /* AppDelegate.m in Sources */,
@@ -532,7 +548,9 @@
 				E9BE7C47221E2C03007DA83B /* LoginViewController.m in Sources */,
 				E9FE7716223C7EFD00E82488 /* OrderViewController.m in Sources */,
 				E9FE7704223C753100E82488 /* SubmitCell.m in Sources */,
+				E9A5ADB02267FB71008F7214 /* Address.m in Sources */,
 				E9F6C70A2230C68700F78CF3 /* SelectCell.m in Sources */,
+				E9A5ADAD2267EFD4008F7214 /* Customer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

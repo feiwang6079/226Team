@@ -8,10 +8,18 @@
 
 #import "AddressViewController.h"
 #import "AddressCell.h"
+#import "NetworkManager.h"
+#import "SVProgressHUD.h"
+#import "YYModel.h"
+#import "Address.h"
+#import "ServerResult.h"
+
 
 @interface AddressViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
+
+@property (nonatomic, strong) NSArray *locationArray;
 
 
 @end
@@ -24,11 +32,28 @@
     
     self.title = @"Address";
     self.tabBarController.tabBar.hidden = YES;
+    _locationArray = [NSArray array];
+    
+    [SVProgressHUD showWithStatus:@"Please wait"];
+    [[NetworkManager sharedNetworkManager] getWithUrlString:[NSString stringWithFormat:@"%@cafe",URL] parameters:[NSDictionary dictionary] success:^(id response){
+        ServerResult *result = [ServerResult yy_modelWithDictionary:response];
+        if(result.code != 200){
+            [SVProgressHUD showErrorWithStatus:result.message];
+        }else{
+            [SVProgressHUD dismiss];
+            NSArray *arr = [NSArray yy_modelArrayWithClass:[Address class] json:result.data];
+            self.locationArray = arr;
+            [self.myTableView reloadData];
+        }
+    } failure:^(NSError *error){
+        NSLog(@"%@", error);
+        [SVProgressHUD showErrorWithStatus: error.localizedDescription];
+    }];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return [_locationArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -37,6 +62,9 @@
     if(cell == nil){
         cell = [[[NSBundle mainBundle] loadNibNamed:@"AddressCell" owner:self options:nil] lastObject];
     }
+    Address *address = [self.locationArray objectAtIndex:indexPath.row];
+    cell.regLabel.text = [NSString stringWithFormat:@"%@", address.re_id];
+    cell.locationLabel.text = [NSString stringWithFormat:@"%@", address.location];
     return cell;
 }
 

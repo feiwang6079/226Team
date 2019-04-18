@@ -33,11 +33,11 @@
     
     self.title = @"Topping";
     
-    _selectArray = [NSMutableArray arrayWithObjects:@"Select Size", @"Select sugar", @"Select Toppings", nil];
+    _selectArray = [NSMutableArray arrayWithObjects:@"Select Ice Level", @"Select Sugar", @"Select Toppings", nil];
     _rowDic = [NSMutableDictionary dictionary];
-    [_rowDic setObject:@[@"Large",@"Mid",@"Small"] forKey:[_selectArray objectAtIndex:0]];
-    [_rowDic setObject:@[@"Large",@"Mid",@"Small"] forKey:[_selectArray objectAtIndex:1]];
-    [_rowDic setObject:@[@"Large",@"Mid",@"Small"] forKey:[_selectArray objectAtIndex:2]];
+    [_rowDic setObject:@[@"0%", @"30%", @"50%", @"100%", @"hot"] forKey:[_selectArray objectAtIndex:0]];
+    [_rowDic setObject:@[@"0%", @"30%", @"50%", @"100%"] forKey:[_selectArray objectAtIndex:1]];
+    [_rowDic setObject:@[@"boba",@"Jelly grass",@"pudding", @"red beans"] forKey:[_selectArray objectAtIndex:2]];
     _selectDic = [NSMutableDictionary dictionary];
     [_selectDic setValue:@"0" forKey:[_selectArray objectAtIndex:0]];
     [_selectDic setValue:@"0" forKey:[_selectArray objectAtIndex:1]];

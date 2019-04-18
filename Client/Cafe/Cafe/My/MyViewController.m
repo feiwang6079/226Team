@@ -7,8 +7,15 @@
 //
 
 #import "MyViewController.h"
+#import "NetworkManager.h"
+#import "SVProgressHUD.h"
+#import "ServerResult.h"
+#import "YYModel.h"
 
 @interface MyViewController ()
+
+@property (weak, nonatomic) IBOutlet UILabel *moneyLabel;
+
 
 @end
 
@@ -19,7 +26,43 @@
     // Do any additional setup after loading the view from its nib.
     
     self.title = @"My";
+    
+    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+    double money = [user doubleForKey:USERMONEY];
+    self.moneyLabel.text = [NSString stringWithFormat:@"%.2f", money];
 }
+
+- (IBAction)addButtonPressed:(id)sender {
+    
+    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+    NSInteger cus_id = [user integerForKey:USERTOKEN];
+    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInteger:cus_id], @"cus_id", [NSNumber numberWithInteger:100], @"value", nil];
+    [SVProgressHUD showWithStatus:@"Please wait!"];
+    [[NetworkManager sharedNetworkManager] getWithUrlString:[NSString stringWithFormat:@"%@topup",URL] parameters:dic success:^(id response){
+        NSLog(@"%@", response);
+
+        ServerResult *result = [ServerResult yy_modelWithDictionary:response];
+        if(result.code != 200){
+            [SVProgressHUD showErrorWithStatus:result.message];
+        }else{
+            [SVProgressHUD dismiss];
+            NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+            double money = [user doubleForKey:USERMONEY];
+            money += 100;
+            self.moneyLabel.text = [NSString stringWithFormat:@"%.2f", money];
+            [user setDouble:money forKey:USERMONEY];
+            [user synchronize];
+        }
+        
+        
+
+    } failure:^(NSError *error){
+        NSLog(@"%@", error);
+        [SVProgressHUD showErrorWithStatus: error.localizedDescription];
+    }];
+    
+}
+
 
 /*
 #pragma mark - Navigation

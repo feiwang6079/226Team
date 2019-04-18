@@ -15,6 +15,7 @@ public class Drink {
 
 @Id @GeneratedValue(strategy= GenerationType.IDENTITY)
     private long drink_id;
+    private long order_id;
     private String ice_level;
     private String sugar_level;
     private double price;
@@ -24,13 +25,14 @@ public class Drink {
 //constructors
     public Drink(){}
 
-    public Drink(long drink_id, String ice_level, String sugar, double price, String emp_id, String tea_name){
+    public Drink(long drink_id, long order_id, String ice_level, String sugar, double price, String emp_id, String tea_name){
         this.drink_id = drink_id;
         this.ice_level = ice_level;
         this.sugar_level = sugar;
         this.price = price;
         this.emp_id = emp_id;
         this.tea_name = tea_name;
+        this.order_id = order_id;
     }
 //getters
     public double getPrice() {
@@ -84,5 +86,17 @@ public class Drink {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    public long getOrder_id() {
+        return order_id;
+    }
+
+    public void setOrder_id(long order_id) {
+        this.order_id = order_id;
+    }
+
+    public String getSugar_level() {
+        return sugar_level;
     }
 }

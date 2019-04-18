@@ -21,6 +21,13 @@
 
 #define navigationBarColor RGB(33, 192, 174)
 
-#define URL @"http://172.20.10.8:8080/"
+#define URL @"http://172.20.10.5:8080/"
+
+#define USERTOKEN @"userToken"
+#define USERMONEY @"userMoney"
+
+#define LOGINSUCCESS @"loginSuccess"
+
+#import "PublicMethod.h"
 
 #endif /* PrefixHeader_pch */

@@ -12,7 +12,8 @@
 #import "AFHTTPSessionManager.h"
 #import "NetworkManager.h"
 #import "YYModel.h"
-#import "User.h"
+#import "ServerResult.h"
+#import "Customer.h"
 
 @interface LoginViewController ()<UITextFieldDelegate>
 
@@ -32,7 +33,7 @@
     }
     else{
 //        NSLog(@"123123");
-        
+        [self loginButtonPressed:nil];
     }
 
     
@@ -41,18 +42,42 @@
 }
     
 - (IBAction)loginButtonPressed:(id)sender {
-    NSDictionary * dic = [NSDictionary dictionaryWithObjectsAndKeys:@"login" ,@"q",
-                          @"user1", @"username",
-                          @"pass1", @"password", nil];
     
-    
-    User *user = [User yy_modelWithDictionary:dic];
-    NSLog(@"%@", user);
+    NSString *userName = self.accountTextField.text;
+    NSString *password = self.passwordTextField.text;
+    if(userName == nil || password == nil || [userName isEqualToString:@""] || [password isEqualToString:@""]){
+        [SVProgressHUD showErrorWithStatus:@"Please input all information"];
+        return;
+    }
 
-    [[NetworkManager sharedNetworkManager] getWithUrlString:[NSString stringWithFormat:@"%@users",URL] parameters:dic success:^(id response){
+    password = [PublicMethod md5EncryptWithString:password];
+
+    NSDictionary * dic = [NSDictionary dictionaryWithObjectsAndKeys:
+                          userName, @"cus_id",
+                          password, @"password", nil];
+    
+    [SVProgressHUD showWithStatus:@"Please wait"];
+    [[NetworkManager sharedNetworkManager] getWithUrlString:[NSString stringWithFormat:@"%@user",URL] parameters:dic success:^(id response){
         NSLog(@"%@", response);
+        ServerResult *result = [ServerResult yy_modelWithDictionary:response];
+        if(result.code != 200){
+            [SVProgressHUD showErrorWithStatus:result.message];
+        }else{
+            [SVProgressHUD dismiss];
+            Customer *customer = [Customer yy_modelWithJSON:result.data];
+            
+            NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+            [user setInteger:customer.cus_id forKey:USERTOKEN];
+            [user setDouble:customer.account_balance forKey:USERMONEY];
+            [user synchronize];
+
+            NSNotification *notification = [NSNotification notificationWithName:LOGINSUCCESS object:nil];
+            [[NSNotificationCenter defaultCenter] postNotification:notification];
+        }
+
     } failure:^(NSError *error){
         NSLog(@"%@", error);
+        [SVProgressHUD showErrorWithStatus: error.localizedDescription];
     }];
  
 }

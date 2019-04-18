@@ -13,6 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface PublicMethod : NSObject
 
+//md5加密方法
++ (NSString *)md5EncryptWithString:(NSString *)string;
+
 @end
 
 NS_ASSUME_NONNULL_END
