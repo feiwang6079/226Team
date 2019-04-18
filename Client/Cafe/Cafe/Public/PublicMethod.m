@@ -29,7 +29,9 @@ static NSString *encryptionKey = @"nha735n197nxn(N′568GGS%d~~9naei';45vhhafdjk
 }
 
 + (NSString *)md5EncryptWithString:(NSString *)string{
-    return [self md5:[NSString stringWithFormat:@"%@%@", encryptionKey, string]];
+//    return [self md5:[NSString stringWithFormat:@"%@%@", encryptionKey, string]];
+    return [self md5:string];
+
 }
 
 + (NSString *)md5:(NSString *)string{

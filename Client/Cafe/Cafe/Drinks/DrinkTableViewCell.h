@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DrinkTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *nameLable;
+
+@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
+
 @end
 
 NS_ASSUME_NONNULL_END

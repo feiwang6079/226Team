@@ -38,7 +38,7 @@
                     <rect key="frame" x="18" y="378" width="341" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.30139708520000003" green="0.65559601779999999" blue="0.60000371929999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <state key="normal" title="Increase $10">
+                    <state key="normal" title="Increase $100">
                         <color key="titleColor" red="0.97592383620000001" green="0.97666221860000002" blue="0.97603815790000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>

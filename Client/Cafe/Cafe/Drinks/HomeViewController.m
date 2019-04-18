@@ -10,12 +10,19 @@
 #import "DrinkTableViewCell.h"
 #import "SelectViewController.h"
 #import "AddressViewController.h"
+#import "NetworkManager.h"
+#import "ServerResult.h"
+#import "YYModel.h"
+#import "SVProgressHUD.h"
+#import "Tea.h"
 
 @interface HomeViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
 
-@property(strong, nonatomic) NSMutableArray *drinkArray;
+@property(strong, nonatomic) NSArray *drinkArray;
+
+
 
 @end
 
@@ -34,18 +41,36 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.title = @"Drinks";
+    self.title = @"Teas";
     
     UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
     rightButton.frame = CGRectMake(0, 0, 25, 17);
     [rightButton setBackgroundImage:[UIImage imageNamed:@"icon_homepage_map_selected_old"] forState:UIControlStateNormal];
     [rightButton addTarget:self action:@selector(showCafeButtonPressed) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:rightButton];
-//    [self.navigationController.navigationBar.view
     self.navigationItem.rightBarButtonItem = rightItem;
+    _drinkArray = [NSArray array];
     
-    
-    _drinkArray = [NSMutableArray arrayWithObjects:@"drink1",@"drink1",@"drink1",@"drink1",@"drink1", nil];
+    [SVProgressHUD showWithStatus:@"Please wait"];
+    [[NetworkManager sharedNetworkManager] getWithUrlString:[NSString stringWithFormat:@"%@tea",URL] parameters:[NSDictionary dictionary] success:^(id response){
+        NSLog(@"%@", response);
+        
+        ServerResult *result = [ServerResult yy_modelWithDictionary:response];
+        if(result.code != 200){
+            [SVProgressHUD showErrorWithStatus:result.message];
+        }else{
+            [SVProgressHUD dismiss];
+            NSArray *arr = [NSArray yy_modelArrayWithClass:[Tea class] json:result.data];
+            self.drinkArray = arr;
+            [self.myTableView reloadData];
+        }
+        
+        
+        
+    } failure:^(NSError *error){
+        NSLog(@"%@", error);
+        [SVProgressHUD showErrorWithStatus: error.localizedDescription];
+    }];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -59,6 +84,9 @@
     if(cell == nil){
         cell = [[[NSBundle mainBundle] loadNibNamed:@"DrinkTableViewCell" owner:self options:nil] lastObject];
     }
+    Tea *t = [self.drinkArray objectAtIndex:indexPath.row];
+    cell.nameLable.text = t.tea_name;
+    cell.priceLabel.text = [NSString stringWithFormat:@"$%0.2f", t.price];
     return cell;
 }
 

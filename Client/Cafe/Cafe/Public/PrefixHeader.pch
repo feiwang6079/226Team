@@ -21,7 +21,7 @@
 
 #define navigationBarColor RGB(33, 192, 174)
 
-#define URL @"http://169.254.99.166:8080/"
+#define URL @"http://172.20.10.5:8080/"
 
 #define USERTOKEN @"userToken"
 #define USERMONEY @"userMoney"
