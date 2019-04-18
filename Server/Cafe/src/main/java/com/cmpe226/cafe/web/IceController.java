@@ -1,6 +1,8 @@
 package com.cmpe226.cafe.web;
 
 import com.cmpe226.cafe.Ice;
+import com.cmpe226.cafe.Message;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,8 +15,18 @@ public class IceController {
     IceRowMapper iceRowMapper;
 
     @GetMapping("/listAllIce")
-    public List<Ice> customer(){
-        List<Ice> cafes = iceRowMapper.findAllIce();
-        return  cafes;
+    public Message listAllIce(){
+
+        List<Ice> ices = iceRowMapper.findAllIce();
+        String data;
+        ObjectMapper mapper = new ObjectMapper();
+
+        try{
+            data = mapper.writeValueAsString(ices);
+        }catch (Exception e){
+            data = "";
+        }
+
+        return new Message(200, "Success", data);
     }
 }
