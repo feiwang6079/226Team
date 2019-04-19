@@ -2,10 +2,7 @@ package com.cmpe226.cafe;
 
 import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Drink {
@@ -13,27 +10,30 @@ public class Drink {
 //    @GeneratedValue(generator="system-uuid")
 //    @GenericGenerator(name="system-uuid", strategy = "uuid")
 
-@Id @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @Id @GeneratedValue(strategy= GenerationType.IDENTITY)
     private long drink_id;
-    private long order_id;
     private String ice_level;
     private String sugar_level;
     private double price;
     private String emp_id;
     private String tea_name;
-
-//constructors
+    private String topping;
+    @ManyToOne
+    @JoinColumn(name = "order_id")
+    private Orders orders;
+////constructors
     public Drink(){}
 
-    public Drink(long drink_id, long order_id, String ice_level, String sugar, double price, String emp_id, String tea_name){
-        this.drink_id = drink_id;
+    public Drink(String ice_level, String sugar,
+                 double price, String emp_id, String tea_name, String topping){
         this.ice_level = ice_level;
         this.sugar_level = sugar;
         this.price = price;
         this.emp_id = emp_id;
         this.tea_name = tea_name;
-        this.order_id = order_id;
+        this.topping = topping;
     }
+
 //getters
     public double getPrice() {
         return price;
@@ -58,7 +58,16 @@ public class Drink {
     public String getTea_name() {
         return tea_name;
     }
-//print method
+
+    public Orders getOrders(){
+        return orders;
+    }
+
+        public String getTopping() {
+        return topping;
+    }
+
+    //print method
     @Override
     public String toString() {
         return getDrink_id() +" " + getTea_name() +" " + getSugar() +" " + getIce_level()+" " + getEmp_id();
@@ -88,15 +97,23 @@ public class Drink {
         this.price = price;
     }
 
-    public long getOrder_id() {
-        return order_id;
-    }
-
-    public void setOrder_id(long order_id) {
-        this.order_id = order_id;
-    }
+//    public long getOrder_id() {
+//        return order_id;
+//    }
+//
+//    public void setOrder_id(long order_id) {
+//        this.order_id = order_id;
+//    }
 
     public String getSugar_level() {
         return sugar_level;
+    }
+
+    public void setTopping(String top){
+        this.topping = top;
+    }
+
+    public void setOrders(Orders orders) {
+        this.orders = orders;
     }
 }

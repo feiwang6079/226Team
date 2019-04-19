@@ -44,14 +44,14 @@ public class CustomerController {
     }
 
     @PostMapping("/payByBalance")
-    public int payByBalance(@RequestParam String cus_id,
+    public int payByBalance(@RequestParam long cus_id,
                                @RequestParam double total_price){
 
        return customerService.payByBalance(cus_id,total_price);
     }
 
     @GetMapping("/topup")
-    public Message topUp(@RequestParam String cus_id,
+    public Message topUp(@RequestParam long cus_id,
                      @RequestParam double value){
 
         int result = customerService.topUp(cus_id, value);
@@ -63,12 +63,12 @@ public class CustomerController {
     }
 
     @GetMapping("/review")
-    public Customer review(@RequestParam String cus_id){
+    public Customer review(@RequestParam long cus_id){
         return customerService.review(cus_id);
     }
 
     @GetMapping("/user")
-    public Message review(@RequestParam String cus_id, @RequestParam String password){
+    public Message review(@RequestParam long cus_id, @RequestParam String password){
         Customer c =  customerService.review(cus_id);
         if(c != null && c.getPassword().toLowerCase().equals(password.toLowerCase())) {
             return new Message(200, "Success", c.toString());

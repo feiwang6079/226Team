@@ -15,8 +15,8 @@ public class PaymentController {
     public Payment savePayment(@RequestParam long payment_id,
                                @RequestParam long order_id){
         Payment p = new Payment();
-        p.setOrder_id(order_id);
+//        p.setOrder_id(order_id);
         p.setPayment_id(payment_id);
-        return paymentService.save(p);
+        return paymentService.save(p, order_id);
     }
 }

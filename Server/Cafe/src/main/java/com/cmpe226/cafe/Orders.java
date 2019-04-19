@@ -1,17 +1,16 @@
 package com.cmpe226.cafe;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Time;
 import java.sql.Timestamp;
+import java.util.List;
 
 @Entity
 public class Orders {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "order_id")
     private long order_id;
     private double total_price;
     private String status;
@@ -20,6 +19,10 @@ public class Orders {
     private Time t;
     private long cus_id;
     private String re_id;
+    @OneToMany(mappedBy = "orders", cascade = {CascadeType.ALL})
+
+    private List<Drink> drinks;
+
 
 //constructors
     public Orders(long order_id, double total_price, String status, Time t,long cus_id, String re_id) {
@@ -89,5 +92,13 @@ public class Orders {
 
     public void setRe_id(String re_id) {
         this.re_id = re_id;
+    }
+
+    public List<Drink> getDrinks(){
+        return drinks;
+    }
+
+    public void setDrinks(List<Drink> drinks) {
+        this.drinks = drinks;
     }
 }

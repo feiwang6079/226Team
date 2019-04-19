@@ -14,15 +14,15 @@ public interface CustomerRepository extends JpaRepository<Customer, String> {
     @Transactional
     @Modifying
     @Query("update Customer c set c.account_balance = c.account_balance - ?2 where cus_id = ?1")
-    public int payByBalance(String cus_id, double total_price);
+    public int payByBalance(long cus_id, double total_price);
 
     //topUp
     @Transactional
     @Modifying
     @Query(value = "update customer set account_balance = account_balance + ?2 where cus_id = ?1", nativeQuery = true)
-    public int topUp(String cus_id, double value);
+    public int topUp(long cus_id, double value);
 
     //review
     @Query(value = "select * from customer where cus_id = ?1", nativeQuery = true)
-    public Customer review(String cus_id);
+    public Customer review(long cus_id);
 }

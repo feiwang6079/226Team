@@ -30,4 +30,9 @@ spring:
     dialect: MySQLDialect
 
 
+  jpa:
+    properties:
+      hibernate:
+        id:
+          new_generator_mappings=false:
 

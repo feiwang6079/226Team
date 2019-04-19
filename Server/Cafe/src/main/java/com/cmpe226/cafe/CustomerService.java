@@ -10,15 +10,15 @@ public class CustomerService {
     @Autowired
     CustomerRepository customerRepository;
 
-    public int payByBalance(String cus_id, double total_price){
+    public int payByBalance(long cus_id, double total_price){
         return customerRepository.payByBalance(cus_id, total_price);
     }
 
-    public int topUp(String cus_id, double value){
+    public int topUp(long cus_id, double value){
         return customerRepository.topUp(cus_id, value);
     }
 
-    public Customer review(String cus_id){
+    public Customer review(long cus_id){
         return customerRepository.review(cus_id);
     }
 
