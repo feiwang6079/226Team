@@ -20,8 +20,8 @@ public class Orders {
     private Time t;
     private long cus_id;
     private String re_id;
-    @OneToMany(mappedBy = "orders", cascade = {CascadeType.ALL})
 
+    @OneToMany(mappedBy = "orders", cascade = {CascadeType.ALL})
     private List<Drink> drinks;
 
 
@@ -95,7 +95,11 @@ public class Orders {
         this.re_id = re_id;
     }
 
-    public List<Drink> getDrinks(){
+    public void saveDrinks(List<Drink> drinks) {
+        this.drinks = drinks;
+    }
+
+    public List<Drink> getDrinks() {
         return drinks;
     }
 

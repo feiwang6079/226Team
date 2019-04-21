@@ -4,6 +4,7 @@ import com.cmpe226.cafe.models.Drink;
 import com.cmpe226.cafe.models.Orders;
 import com.cmpe226.cafe.repositories.TeaService;
 import com.cmpe226.cafe.services.OrderService;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,21 +31,30 @@ public class OrdersTest {
         List<Drink> drinks = new ArrayList<>();
         Drink d1 = new Drink( "50%",  "30%",
         23, "emp_01", "Tieguanyin", "boba");
-        d1.setOrders(orders);
+        d1.saveOrders(orders);
         drinks.add(d1);
-
         Drink d2 = new Drink( "0%",  "0%",
                 23, "emp_01", "Tieguanyin", "boba");
-        d2.setOrders(orders);
+        d2.saveOrders(orders);
         drinks.add(d2);
+        orders.saveDrinks(drinks);
 
-        orders.setDrinks(drinks);
         double total_price = 0;
         for(Drink d: drinks) {
             total_price += teaService.findByTeaName(d.getTea_name()).getPrice();
         }
         orders.setTotal_price(total_price);
         orderService.save(orders);
+
+
+        ObjectMapper mapper = new ObjectMapper();
+        String data = "";
+        try {
+            data = mapper.writeValueAsString(orders);
+        } catch (Exception e) {
+            data = "";
+        }
+        System.out.println(data);
     }
 
     public void pay(){
