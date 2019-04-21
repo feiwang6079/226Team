@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+
 @Repository
 public interface OrderRepository extends JpaRepository<Orders, Long> {
     @Modifying
@@ -16,7 +17,6 @@ public interface OrderRepository extends JpaRepository<Orders, Long> {
 
     @Query(value = "select * from orders where cus_id = ?1", nativeQuery = true)
     public List<Orders> reviewMyOrders(long cus_id);
-
 
 
 }

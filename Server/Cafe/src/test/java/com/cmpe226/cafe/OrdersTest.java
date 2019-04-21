@@ -2,7 +2,7 @@ package com.cmpe226.cafe;
 
 import com.cmpe226.cafe.models.Drink;
 import com.cmpe226.cafe.models.Orders;
-import com.cmpe226.cafe.repositories.TeaService;
+import com.cmpe226.cafe.services.TeaService;
 import com.cmpe226.cafe.services.OrderService;
 import org.junit.Test;
 import org.junit.runner.RunWith;

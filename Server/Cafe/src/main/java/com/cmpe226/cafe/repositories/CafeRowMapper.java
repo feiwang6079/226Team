@@ -8,8 +8,9 @@ import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
 @Repository
-@Service
+//@Service
 public class CafeRowMapper extends BeanPropertyRowMapper {
 
     @Autowired
@@ -26,6 +27,7 @@ public class CafeRowMapper extends BeanPropertyRowMapper {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
         return cafes;
     }
 }

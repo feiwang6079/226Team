@@ -6,17 +6,20 @@ import javax.persistence.Id;
 
 @Entity
 public class Cafe {
-    @Id @GeneratedValue private String re_id;
+    @Id
+    @GeneratedValue
+    private String re_id;
     private String location;
 
-    public Cafe(){}
+    public Cafe() {
+    }
 
-    public Cafe(String re_id, String location){
+    public Cafe(String re_id, String location) {
         this.location = location;
         this.re_id = re_id;
     }
 
-//getters
+    //getters
     public String getRe_id() {
         return re_id;
     }
@@ -25,7 +28,7 @@ public class Cafe {
         return location;
     }
 
-//setters
+    //setters
     public void setRe_id(String re_id) {
         this.re_id = re_id;
     }
@@ -34,9 +37,9 @@ public class Cafe {
         this.location = location;
     }
 
-//print
+    //print
     @Override
     public String toString() {
-        return getRe_id() +"  "+ getLocation();
+        return getRe_id() + "  " + getLocation();
     }
 }

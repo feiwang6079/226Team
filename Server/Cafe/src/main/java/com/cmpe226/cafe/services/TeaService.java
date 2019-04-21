@@ -1,4 +1,4 @@
-package com.cmpe226.cafe.repositories;
+package com.cmpe226.cafe.services;
 
 import com.cmpe226.cafe.models.Tea;
 import com.cmpe226.cafe.repositories.TeaRepository;
