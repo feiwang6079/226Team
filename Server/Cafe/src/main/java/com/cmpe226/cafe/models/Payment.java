@@ -1,7 +1,5 @@
 package com.cmpe226.cafe.models;
 
-import com.cmpe226.cafe.models.Orders;
-
 import javax.persistence.*;
 
 @Entity

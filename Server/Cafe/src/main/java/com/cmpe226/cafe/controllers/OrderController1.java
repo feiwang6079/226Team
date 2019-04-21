@@ -42,13 +42,19 @@ public class OrderController1 {
             return new Message(200, "Success", data);
     }
 
-    @GetMapping("/listUserOrders")
-    public List<Orders> listUserOrders(@RequestParam long cus_id){
-        return orderService.reviewMyOrders(cus_id);
+    @GetMapping("/orders")
+    public Message listUserOrders(@RequestParam long cus_id){
+        List<Orders> orders = orderService.reviewMyOrders(cus_id);
 
+        ObjectMapper mapper = new ObjectMapper();
+        String data = "";
+        try{
+            data = mapper.writeValueAsString(orders);
+        }catch (Exception e){
+            e.printStackTrace();
+            data = "";
+        }
+
+        return new Message(200, "Success", data);
     }
-
-
-
-
 }

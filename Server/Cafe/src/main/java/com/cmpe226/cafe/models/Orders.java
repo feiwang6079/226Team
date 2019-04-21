@@ -26,7 +26,7 @@ public class Orders {
 
 
 //constructors
-    public Orders(long order_id, double total_price, String status, Time t,long cus_id, String re_id) {
+    public Orders(long order_id, double total_price, String status, Time t, long cus_id, String re_id) {
         this.total_price = total_price;
         this.status = status;
         this.order_id = order_id;
@@ -35,7 +35,7 @@ public class Orders {
         this.re_id = re_id;
     }
 
-    public Orders(double total_price, String status, Time t,long cus_id, String re_id) {
+    public Orders(double total_price, String status, Time t, long cus_id, String re_id) {
         this.total_price = total_price;
         this.status = status;
         this.t = t;
