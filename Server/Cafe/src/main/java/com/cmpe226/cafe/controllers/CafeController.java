@@ -16,7 +16,7 @@ public class CafeController {
     @Autowired
     CafeRowMapper cafeRowMapper;
 
-    @GetMapping("/cafe")
+    @GetMapping("/cafes")
     public Message customer(){
         List<Cafe> cafes = cafeRowMapper.findAllCafe();
 

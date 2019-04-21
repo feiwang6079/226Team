@@ -15,7 +15,7 @@ public class IceController {
     @Autowired
     IceRowMapper iceRowMapper;
 
-    @GetMapping("/listAllIce")
+    @GetMapping("/ice_types")
     public Message listAllIce(){
 
         List<Ice> ices = iceRowMapper.findAllIce();

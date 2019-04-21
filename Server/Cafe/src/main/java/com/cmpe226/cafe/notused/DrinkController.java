@@ -1,4 +1,4 @@
-package com.cmpe226.cafe.controllers;
+package com.cmpe226.cafe.notused;
 
 import com.cmpe226.cafe.services.DrinkService;
 import org.springframework.beans.factory.annotation.Autowired;

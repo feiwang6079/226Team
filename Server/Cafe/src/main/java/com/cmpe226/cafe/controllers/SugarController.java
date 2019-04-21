@@ -16,7 +16,7 @@ public class SugarController {
     @Autowired
     SugarRowMapper sugarRowMapper;
 
-    @GetMapping("/listAllSugar")
+    @GetMapping("/sugar_types")
     public Message listAllSugar() {
 
         List<Sugar> sugars = sugarRowMapper.findAllSugar();
@@ -31,5 +31,4 @@ public class SugarController {
 
         return new Message(200, "Success", data);
     }
-
 }

@@ -57,10 +57,6 @@ public class Drink {
         return tea_name;
     }
 
-    public Orders getOrders(){
-        return orders;
-    }
-
         public String getTopping() {
         return topping;
     }
@@ -114,4 +110,8 @@ public class Drink {
     public void setOrders(Orders orders) {
         this.orders = orders;
     }
+
+//    public Orders getOrders(){
+//        return orders;
+//    }
 }

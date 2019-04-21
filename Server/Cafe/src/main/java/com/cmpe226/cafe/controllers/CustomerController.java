@@ -18,22 +18,18 @@ public class CustomerController {
 //    @Autowired
 //    CustomerResource customerResource;
 
-    @GetMapping("/login")
+    @PostMapping("/login")
     public Message review(@RequestParam long cus_id, @RequestParam String password){
         Customer c =  customerService.review(cus_id);
-        if(c != null && c.getPassword().toLowerCase().equals(password.toLowerCase())) {
+
+        if (c == null) {
+            return new Message(401, "User not found", "");
+        } else if(c.getPassword().toLowerCase().equals(password.toLowerCase())) {
             return new Message(200, "Success", c.toString());
-        }else {
-            return new Message(401, "Wrong password", "");
+        } else {
+            return new Message(402, "Wrong password", "");
         }
     }
-
-//    @GetMapping("/cusTest")
-//    public Customer customer(@RequestParam String id){
-//        System.out.println("cusTest is started");
-//        Customer customer = customerResource.get(id);
-//        return  customer;
-//    }
 
     @PostMapping("/payByBalance")
     public int payByBalance(@RequestParam long cus_id,
