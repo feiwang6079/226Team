@@ -1,14 +1,15 @@
 package com.cmpe226.cafe.controllers;
 
+import com.cmpe226.cafe.models.Drink;
 import com.cmpe226.cafe.models.Message;
 import com.cmpe226.cafe.models.Orders;
+import com.cmpe226.cafe.repositories.TeaService;
 import com.cmpe226.cafe.services.OrderService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -16,30 +17,54 @@ public class OrderController1 {
     @Autowired
     OrderService orderService;
 
-    @GetMapping("/saveOrder")
-    public Message listUserOrders(//@RequestParam long order_id,
-                                  @RequestParam double total_price,
+    @Autowired
+    private TeaService teaService;
+
+    @PostMapping("/orders")
+    public Message createOrder(//@RequestParam long order_id,
+//                                  @RequestParam double total_price,
                                   //@RequestParam String status,
                                   //@RequestParam Timestamp t,
-                                  @RequestParam long cus_id,
-                                  @RequestParam String re_id  ){
+//                                  @RequestBody long cus_id,
+//                                  @RequestBody String re_id,
+//                               @RequestBody String drinks_json
+                               @RequestBody Orders orders
+                               ) {
 
-            Orders o = new Orders();
-            o.setTotal_price(total_price);
-            o.setCus_id(cus_id);
-            o.setRe_id(re_id);
-            //o.setT(System.currentTimeMillis());
-            o.setStatus("unpaid");
-            Orders a = orderService.save(o);
-            ObjectMapper mapper = new ObjectMapper();
-            String data = "";
-            try{
-                data = mapper.writeValueAsString(a);
-            }catch (Exception e){
-                data = "";
-            }
+//        Orders orders = new Orders();
+//        orders.setCus_id(cus_id);
+//        orders.setRe_id(re_id);
+//        orders.setStatus("unpaid");
+//
+//        List<Drink> drinks = new ArrayList<>();
+//        Drink d1 = new Drink("50%", "30%",
+//                23, "emp_01", "Tieguanyin", "boba");
+//        d1.saveOrders(orders);
+//        drinks.add(d1);
+//        Drink d2 = new Drink("0%", "0%",
+//                23, "emp_01", "Tieguanyin", "boba");
+//        d2.saveOrders(orders);
+//        drinks.add(d2);
+//        orders.saveDrinks(drinks);
+//
+//
+//        double total_price = 0;
+//        for(Drink d: drinks) {
+//            total_price += teaService.findByTeaName(d.getTea_name()).getPrice();
+//        }
+//        orders.setTotal_price(total_price);
+//
+        orders = orderService.save(orders);
 
-            return new Message(200, "Success", data);
+        ObjectMapper mapper = new ObjectMapper();
+        String data = "";
+        try {
+            data = mapper.writeValueAsString(orders);
+        } catch (Exception e) {
+            data = "";
+        }
+
+        return new Message(200, "Success", data);
     }
 
     @GetMapping("/orders")

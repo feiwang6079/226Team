@@ -16,6 +16,7 @@ public class Drink {
     private String emp_id;
     private String tea_name;
     private String topping;
+
     @ManyToOne
     @JoinColumn(name = "order_id")
     private Orders orders;
@@ -91,14 +92,6 @@ public class Drink {
         this.price = price;
     }
 
-//    public long getOrder_id() {
-//        return order_id;
-//    }
-//
-//    public void setOrder_id(long order_id) {
-//        this.order_id = order_id;
-//    }
-
     public String getSugar_level() {
         return sugar_level;
     }
@@ -107,11 +100,7 @@ public class Drink {
         this.topping = top;
     }
 
-    public void setOrders(Orders orders) {
+    public void saveOrders(Orders orders) {
         this.orders = orders;
     }
-
-//    public Orders getOrders(){
-//        return orders;
-//    }
 }
