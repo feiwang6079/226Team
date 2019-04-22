@@ -16,6 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (weak, nonatomic) IBOutlet UILabel *priceLabel;
 
+@property (weak, nonatomic) IBOutlet UIImageView *teaImageView;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

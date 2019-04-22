@@ -87,6 +87,9 @@
     Tea *t = [self.drinkArray objectAtIndex:indexPath.row];
     cell.nameLable.text = t.tea_name;
     cell.priceLabel.text = [NSString stringWithFormat:@"$%0.2f", t.price];
+    
+    cell.teaImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"tea%ld.jpg", indexPath.row % 4 + 1]];
+    
     return cell;
 }
 
