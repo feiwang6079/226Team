@@ -44,7 +44,6 @@ public class OrdersTest {
             total_price += teaService.findByTeaName(d.getTea_name()).getPrice();
         }
         orders.setTotal_price(total_price);
-        orderService.save(orders);
 
 
         ObjectMapper mapper = new ObjectMapper();
@@ -55,6 +54,8 @@ public class OrdersTest {
             data = "";
         }
         System.out.println(data);
+
+        orderService.save(orders);
     }
 
     public void pay(){

@@ -19,4 +19,6 @@ public interface OrderRepository extends JpaRepository<Orders, Long> {
     public List<Orders> reviewMyOrders(long cus_id);
 
 
+    @Query(value = "select * from orders where order_id = ?1", nativeQuery = true)
+    public Orders getOrder(long order_id);
 }

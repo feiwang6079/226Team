@@ -12,6 +12,8 @@ import javax.transaction.Transactional;
 public class PaymentService {
     @Autowired
     private PaymentRepository paymentRepository;
+
+    @Autowired
     private OrderRepository orderRepository;
 
     @Transactional
