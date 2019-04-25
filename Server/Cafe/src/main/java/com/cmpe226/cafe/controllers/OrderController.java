@@ -11,10 +11,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-public class OrderController1 {
+public class OrderController {
     @Autowired
     OrderService orderService;
-
 
     @PostMapping("/orders")
     public Message createOrder(
@@ -24,6 +23,7 @@ public class OrderController1 {
         List<Drink> drinks = orders.getDrinks();
         for (Drink drink : drinks) {
             drink.saveOrders(orders);
+            drink.setEmp_id(getEmployID());
         }
 
         orders.setStatus("unpaid");
@@ -38,6 +38,10 @@ public class OrderController1 {
         }
 
         return new Message(200, "Success", data);
+    }
+
+    private String getEmployID(){
+        return "emp_01";
     }
 
     @GetMapping("/orders")
