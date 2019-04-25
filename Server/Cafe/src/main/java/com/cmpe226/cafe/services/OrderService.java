@@ -26,6 +26,11 @@ public class OrderService {
         return orderRepository.reviewMyOrders(cus_id);
     }
 
+
+    public Orders getOrder(long order_id) {
+        return orderRepository.getOrder(order_id);
+    }
+
     @Transactional
     public Payment pay(long order_id){
         Optional<Orders> theOrder = orderRepository.findById(order_id);
