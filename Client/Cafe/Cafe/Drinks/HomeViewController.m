@@ -52,7 +52,7 @@
     _drinkArray = [NSArray array];
     
     [SVProgressHUD showWithStatus:@"Please wait"];
-    [[NetworkManager sharedNetworkManager] getWithUrlString:[NSString stringWithFormat:@"%@tea",URL] parameters:[NSDictionary dictionary] success:^(id response){
+    [[NetworkManager sharedNetworkManager] getWithUrlString:[NSString stringWithFormat:@"%@teas",URL] parameters:[NSDictionary dictionary] success:^(id response){
         NSLog(@"%@", response);
         
         ServerResult *result = [ServerResult yy_modelWithDictionary:response];
@@ -102,6 +102,8 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     SelectViewController *svc = [[SelectViewController alloc] init];
+    Tea *t = [self.drinkArray objectAtIndex:indexPath.row];
+    svc.tea_name = t.tea_name;
     [self.navigationController pushViewController:svc animated:YES];
     [tableView deselectRowAtIndexPath:indexPath animated:FALSE];
 }

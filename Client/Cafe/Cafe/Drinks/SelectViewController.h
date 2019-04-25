@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SelectViewController : UIViewController
 
-
+@property(strong, nonatomic) NSString *tea_name;
 
 @end
 

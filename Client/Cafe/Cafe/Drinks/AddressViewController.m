@@ -35,7 +35,7 @@
     _locationArray = [NSArray array];
     
     [SVProgressHUD showWithStatus:@"Please wait"];
-    [[NetworkManager sharedNetworkManager] getWithUrlString:[NSString stringWithFormat:@"%@cafe",URL] parameters:[NSDictionary dictionary] success:^(id response){
+    [[NetworkManager sharedNetworkManager] getWithUrlString:[NSString stringWithFormat:@"%@cafes",URL] parameters:[NSDictionary dictionary] success:^(id response){
         ServerResult *result = [ServerResult yy_modelWithDictionary:response];
         if(result.code != 200){
             [SVProgressHUD showErrorWithStatus:result.message];

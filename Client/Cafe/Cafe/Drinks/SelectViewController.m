@@ -18,8 +18,10 @@
 @property (strong, nonatomic) NSMutableDictionary *rowDic;
 @property (strong, nonatomic) NSMutableDictionary *selectDic;
 
-@property (strong, nonatomic) NSMutableArray *selectArray;
-
+@property (strong, nonatomic) NSArray *selectArray;
+@property (strong, nonatomic) NSArray *iceArray;
+@property (strong, nonatomic) NSArray *sugarArray;
+@property (strong, nonatomic) NSArray *toppingArray;
 
 @end
 
@@ -33,11 +35,15 @@
     
     self.title = @"Topping";
     
-    _selectArray = [NSMutableArray arrayWithObjects:@"Select Ice Level", @"Select Sugar", @"Select Toppings", nil];
+    _selectArray = [NSArray arrayWithObjects:@"Select Ice Level", @"Select Sugar", @"Select Toppings", nil];
+    _iceArray = @[@"0%", @"30%", @"50%", @"100%", @"hot"];
+    _sugarArray = @[@"0%", @"30%", @"50%", @"100%"];
+    _toppingArray = @[@"No Topping",@"boba",@"Jelly grass",@"pudding", @"red beans"];
+    
     _rowDic = [NSMutableDictionary dictionary];
-    [_rowDic setObject:@[@"0%", @"30%", @"50%", @"100%", @"hot"] forKey:[_selectArray objectAtIndex:0]];
-    [_rowDic setObject:@[@"0%", @"30%", @"50%", @"100%"] forKey:[_selectArray objectAtIndex:1]];
-    [_rowDic setObject:@[@"boba",@"Jelly grass",@"pudding", @"red beans"] forKey:[_selectArray objectAtIndex:2]];
+    [_rowDic setObject:_iceArray forKey:[_selectArray objectAtIndex:0]];
+    [_rowDic setObject:_sugarArray forKey:[_selectArray objectAtIndex:1]];
+    [_rowDic setObject:_toppingArray forKey:[_selectArray objectAtIndex:2]];
     _selectDic = [NSMutableDictionary dictionary];
     [_selectDic setValue:@"0" forKey:[_selectArray objectAtIndex:0]];
     [_selectDic setValue:@"0" forKey:[_selectArray objectAtIndex:1]];
@@ -108,7 +114,26 @@
     
     //添加取消到UIAlertController中
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-//        NSLog(@"点击了完成按钮");
+        NSString *ice_level_row = [self.selectDic valueForKey:[self.selectArray objectAtIndex:0]];
+        NSString *ice_level = [self.iceArray objectAtIndex:ice_level_row.intValue];
+        
+        NSString *sugar_level_row = [self.selectDic valueForKey:[self.selectArray objectAtIndex:1]];
+        NSString *sugar_level =[self.sugarArray objectAtIndex:sugar_level_row.intValue];
+        
+        NSString *topping_row = [self.selectDic valueForKey:[self.selectArray objectAtIndex:2]];
+        NSString *topping =[self.toppingArray objectAtIndex:topping_row.intValue];
+        
+        NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                    ice_level, @"ice_level",
+                                    sugar_level, @"sugar_level",
+                                    self.tea_name, @"tea_name",nil];
+        if(topping_row.intValue == 0){
+            [dic setValue:@"1.2" forKey:@"price"];
+        }else{
+            [dic setValue:topping forKey:@"topping"];
+            [dic setValue:@"1.7" forKey:@"price"];
+        }
+        NSLog(@"%@", dic);
         
         ConfirmOrderVController *svc = [[ConfirmOrderVController alloc] init];
         [self.navigationController pushViewController:svc animated:YES];

@@ -57,7 +57,7 @@
                           password, @"password", nil];
     
     [SVProgressHUD showWithStatus:@"Please wait"];
-    [[NetworkManager sharedNetworkManager] getWithUrlString:[NSString stringWithFormat:@"%@user",URL] parameters:dic success:^(id response){
+    [[NetworkManager sharedNetworkManager] getWithUrlString:[NSString stringWithFormat:@"%@login",URL] parameters:dic success:^(id response){
         NSLog(@"%@", response);
         ServerResult *result = [ServerResult yy_modelWithDictionary:response];
         if(result.code != 200){

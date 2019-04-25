@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Drinke1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hN2-q4-eUt">
-                        <rect key="frame" x="100" y="15" width="119" height="18"/>
+                        <rect key="frame" x="100" y="15" width="119" height="23"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                         <nil key="textColor"/>
@@ -59,7 +59,7 @@
                 <outlet property="priceLabel" destination="spP-Nn-J3r" id="4pp-Xq-eM1"/>
                 <outlet property="teaImageView" destination="82R-pU-RF6" id="Qzi-EG-7sb"/>
             </connections>
-            <point key="canvasLocation" x="-185" y="21"/>
+            <point key="canvasLocation" x="-186.40000000000001" y="20.239880059970016"/>
         </tableViewCell>
     </objects>
     <resources>
