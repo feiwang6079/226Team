@@ -50,10 +50,6 @@ public class Drink {
         return drink_id;
     }
 
-    public String getSugar() {
-        return sugar_level;
-    }
-
     public String getTea_name() {
         return tea_name;
     }
@@ -65,7 +61,7 @@ public class Drink {
     //print method
     @Override
     public String toString() {
-        return getDrink_id() +" " + getTea_name() +" " + getSugar() +" " + getIce_level()+" " + getEmp_id();
+        return getDrink_id() +" " + getTea_name() +" " + getSugar_level() +" " + getIce_level()+" " + getEmp_id();
     }
 //setters
 
