@@ -25,6 +25,7 @@
 
 #define USERTOKEN @"userToken"
 #define USERMONEY @"userMoney"
+#define USER_RE  @"userRe"
 
 #define LOGINSUCCESS @"loginSuccess"
 

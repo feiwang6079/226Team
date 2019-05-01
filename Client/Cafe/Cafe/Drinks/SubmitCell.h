@@ -19,6 +19,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, assign) id<SubmitCellDelegate>delegate;
 
+@property (weak, nonatomic) IBOutlet UIButton *submitButton;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9E0BD1767AB924A85B844B3D /* libPods-Cafe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71814E1A1C09D8463949F4F3 /* libPods-Cafe.a */; };
+		E97F1F49227A53F9005A083F /* Drink.m in Sources */ = {isa = PBXBuildFile; fileRef = E97F1F48227A53F9005A083F /* Drink.m */; };
 		E985FBA92243012800AC206E /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E985FBA82243012800AC206E /* NetworkManager.m */; };
 		E9A5ADAA2267DF85008F7214 /* ServerResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A5ADA92267DF85008F7214 /* ServerResult.m */; };
 		E9A5ADAD2267EFD4008F7214 /* Customer.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A5ADAC2267EFD4008F7214 /* Customer.m */; };
@@ -76,6 +77,8 @@
 /* Begin PBXFileReference section */
 		0D642246B88B669C975DF99D /* Pods-Cafe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cafe.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cafe/Pods-Cafe.release.xcconfig"; sourceTree = "<group>"; };
 		71814E1A1C09D8463949F4F3 /* libPods-Cafe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Cafe.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E97F1F47227A53F9005A083F /* Drink.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Drink.h; sourceTree = "<group>"; };
+		E97F1F48227A53F9005A083F /* Drink.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Drink.m; sourceTree = "<group>"; };
 		E985FBA72243012800AC206E /* NetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
 		E985FBA82243012800AC206E /* NetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 		E9A5ADA82267DF85008F7214 /* ServerResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServerResult.h; sourceTree = "<group>"; };
@@ -216,6 +219,8 @@
 				E9A5ADAF2267FB71008F7214 /* Address.m */,
 				E9A5ADB42268031C008F7214 /* Tea.h */,
 				E9A5ADB52268031C008F7214 /* Tea.m */,
+				E97F1F47227A53F9005A083F /* Drink.h */,
+				E97F1F48227A53F9005A083F /* Drink.m */,
 			);
 			name = Model;
 			path = Cafe/Model;
@@ -559,6 +564,7 @@
 				E9E453502234972700A0A561 /* OrderInfoCell.m in Sources */,
 				E9FE770E223C7BA200E82488 /* AddressCell.m in Sources */,
 				E9FE771B223C806800E82488 /* OrderCell.m in Sources */,
+				E97F1F49227A53F9005A083F /* Drink.m in Sources */,
 				E9BE7C83221E7066007DA83B /* HomeViewController.m in Sources */,
 				E985FBA92243012800AC206E /* NetworkManager.m in Sources */,
 				E9BE7C47221E2C03007DA83B /* LoginViewController.m in Sources */,

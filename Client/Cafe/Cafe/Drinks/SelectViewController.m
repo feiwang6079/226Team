@@ -10,6 +10,7 @@
 #import "SelectCell.h"
 #import "ConfirmOrderVController.h"
 #import "HomeViewController.h"
+#import "Drink.h"
 
 @interface SelectViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -123,19 +124,19 @@
         NSString *topping_row = [self.selectDic valueForKey:[self.selectArray objectAtIndex:2]];
         NSString *topping =[self.toppingArray objectAtIndex:topping_row.intValue];
         
-        NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                    ice_level, @"ice_level",
-                                    sugar_level, @"sugar_level",
-                                    self.tea_name, @"tea_name",nil];
-        if(topping_row.intValue == 0){
-            [dic setValue:@"1.2" forKey:@"price"];
-        }else{
-            [dic setValue:topping forKey:@"topping"];
-            [dic setValue:@"1.7" forKey:@"price"];
-        }
-        NSLog(@"%@", dic);
+        Drink *drinkDetail = [[Drink alloc] init];
+        drinkDetail.ice_level = ice_level;
+        drinkDetail.sugar_level = sugar_level;
+        drinkDetail.tea_name = self.tea_name;
         
+        if(topping_row.intValue == 0){
+            drinkDetail.price = 1.2;
+        }else{
+            drinkDetail.price = 1.7;
+            drinkDetail.topping = topping;
+        }        
         ConfirmOrderVController *svc = [[ConfirmOrderVController alloc] init];
+        svc.drinkDetail = drinkDetail;
         [self.navigationController pushViewController:svc animated:YES];
         
     }];

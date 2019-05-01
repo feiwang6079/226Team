@@ -26,6 +26,8 @@
     if (self = [super init]) {
         afManager = [AFHTTPSessionManager manager];
         afManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/json",@"text/javascript",@"text/html", nil];
+        afManager.requestSerializer = [AFJSONRequestSerializer serializer];
+
     }
     return self;
 }

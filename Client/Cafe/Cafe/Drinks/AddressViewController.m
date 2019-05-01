@@ -68,6 +68,14 @@
     return cell;
 }
 
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    Address *adddress = [self.locationArray objectAtIndex:indexPath.row];
+    NSString *re = adddress.re_id;
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    [userDefault setValue:re forKey:USER_RE];
+}
+
 
 
 /*

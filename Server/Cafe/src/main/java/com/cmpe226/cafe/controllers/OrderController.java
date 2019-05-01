@@ -44,7 +44,7 @@ public class OrderController {
         return "emp_01";
     }
 
-    @GetMapping("/orders")
+    @GetMapping("/getorders")
     public Message listUserOrders(@RequestParam long cus_id){
         List<Orders> orders = orderService.reviewMyOrders(cus_id);
 
