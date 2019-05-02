@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9E0BD1767AB924A85B844B3D /* libPods-Cafe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71814E1A1C09D8463949F4F3 /* libPods-Cafe.a */; };
 		E97F1F49227A53F9005A083F /* Drink.m in Sources */ = {isa = PBXBuildFile; fileRef = E97F1F48227A53F9005A083F /* Drink.m */; };
+		E97F1F4C227A667B005A083F /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = E97F1F4B227A667B005A083F /* Order.m */; };
 		E985FBA92243012800AC206E /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E985FBA82243012800AC206E /* NetworkManager.m */; };
 		E9A5ADAA2267DF85008F7214 /* ServerResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A5ADA92267DF85008F7214 /* ServerResult.m */; };
 		E9A5ADAD2267EFD4008F7214 /* Customer.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A5ADAC2267EFD4008F7214 /* Customer.m */; };
@@ -79,6 +80,8 @@
 		71814E1A1C09D8463949F4F3 /* libPods-Cafe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Cafe.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E97F1F47227A53F9005A083F /* Drink.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Drink.h; sourceTree = "<group>"; };
 		E97F1F48227A53F9005A083F /* Drink.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Drink.m; sourceTree = "<group>"; };
+		E97F1F4A227A667B005A083F /* Order.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Order.h; sourceTree = "<group>"; };
+		E97F1F4B227A667B005A083F /* Order.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Order.m; sourceTree = "<group>"; };
 		E985FBA72243012800AC206E /* NetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
 		E985FBA82243012800AC206E /* NetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 		E9A5ADA82267DF85008F7214 /* ServerResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServerResult.h; sourceTree = "<group>"; };
@@ -221,6 +224,8 @@
 				E9A5ADB52268031C008F7214 /* Tea.m */,
 				E97F1F47227A53F9005A083F /* Drink.h */,
 				E97F1F48227A53F9005A083F /* Drink.m */,
+				E97F1F4A227A667B005A083F /* Order.h */,
+				E97F1F4B227A667B005A083F /* Order.m */,
 			);
 			name = Model;
 			path = Cafe/Model;
@@ -556,6 +561,7 @@
 				E9FE7725223C882E00E82488 /* MyViewController.m in Sources */,
 				E9BE7C3D221E251D007DA83B /* main.m in Sources */,
 				E9FE7709223C7AEA00E82488 /* AddressViewController.m in Sources */,
+				E97F1F4C227A667B005A083F /* Order.m in Sources */,
 				E9D25A52224544DC00B65E29 /* PublicMethod.m in Sources */,
 				E9A5ADAA2267DF85008F7214 /* ServerResult.m in Sources */,
 				E9F6C6F62230B04500F78CF3 /* DrinkTableViewCell.m in Sources */,

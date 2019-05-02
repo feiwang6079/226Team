@@ -15,7 +15,7 @@ public interface OrderRepository extends JpaRepository<Orders, Long> {
     public int pay(long order_id);
 
 
-    @Query(value = "select * from orders where cus_id = ?1", nativeQuery = true)
+    @Query(value = "select * from orders where cus_id = ?1 order by order_id desc", nativeQuery = true)
     public List<Orders> reviewMyOrders(long cus_id);
 
 

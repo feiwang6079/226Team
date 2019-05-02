@@ -12,6 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface OrderCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *orderInfoLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *totalPriceLabel;
+
+@property (weak, nonatomic) IBOutlet UIButton *payButton;
+
 @end
 
 NS_ASSUME_NONNULL_END
