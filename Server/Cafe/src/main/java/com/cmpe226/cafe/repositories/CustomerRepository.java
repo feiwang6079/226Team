@@ -25,4 +25,7 @@ public interface CustomerRepository extends JpaRepository<Customer, String> {
     //review
     @Query(value = "select * from customer where cus_id = ?1", nativeQuery = true)
     public Customer review(long cus_id);
+
+    @Query(value = "select account_balance from customer where cus_id = ?1", nativeQuery = true)
+    public double getAccountBalance(long cus_id);
 }

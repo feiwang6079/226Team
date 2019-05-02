@@ -66,7 +66,11 @@ public class CustomerController {
         return new Message(200, "Success", "");
     }
 
-
+    @GetMapping("/getmoney")
+    public Message money(@RequestParam long cus_id){
+        double balance = customerService.getAccountBalance(cus_id);
+        return new Message(200, "Success", String.valueOf(balance));
+    }
 
 
 //    @PostMapping("/payByBalance")

@@ -25,4 +25,8 @@ public class CustomerService {
     public Customer saveCustomer(Customer c){
         return customerRepository.save(c);
     }
+
+    public double getAccountBalance(long cus_id){
+        return customerRepository.getAccountBalance(cus_id);
+    }
 }

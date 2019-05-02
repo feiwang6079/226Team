@@ -88,7 +88,6 @@
 
 -(void)submitPressed{
     
-    [SVProgressHUD showWithStatus:@"Please wait"];
     
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
@@ -103,6 +102,7 @@
     }
     [dic setObject:array forKey:@"drinks"];
 
+    [SVProgressHUD showWithStatus:@"Please wait"];
     [[NetworkManager sharedNetworkManager] postWithUrlString:[NSString stringWithFormat:@"%@orders",URL] parameters:dic success:^(id response){
         ServerResult *result = [ServerResult yy_modelWithDictionary:response];
         if(result.code != 200){
