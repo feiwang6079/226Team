@@ -50,15 +50,7 @@
     [_selectDic setValue:@"0" forKey:[_selectArray objectAtIndex:1]];
     [_selectDic setValue:@"0" forKey:[_selectArray objectAtIndex:2]];
     
-//    UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//    rightButton.frame = CGRectMake(0, 0, 25, 17);
-//    [rightButton setBackgroundImage:[UIImage imageNamed:@"icon_homepage_map_selected_old"] forState:UIControlStateNormal];
-//    [rightButton addTarget:self action:@selector(showCafeButtonPressed) forControlEvents:UIControlEventTouchUpInside];
-//    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:rightButton];
-//    //    [self.navigationController.navigationBar.view
-//    self.navigationItem.rightBarButtonItem = rightItem;
-    
-    UIBarButtonItem *rightitem = [[UIBarButtonItem alloc] initWithTitle:@"确定" style:UIBarButtonItemStyleDone target:self action:@selector(sureButtonPressed)];
+    UIBarButtonItem *rightitem = [[UIBarButtonItem alloc] initWithTitle:@"Confirm" style:UIBarButtonItemStyleDone target:self action:@selector(sureButtonPressed)];
     self.navigationItem.rightBarButtonItem = rightitem;
 }
 
@@ -108,45 +100,52 @@
 }
 
 -(void)sureButtonPressed{
+    
+    NSString *ice_level_row = [self.selectDic valueForKey:[self.selectArray objectAtIndex:0]];
+    NSString *ice_level = [self.iceArray objectAtIndex:ice_level_row.intValue];
+    
+    NSString *sugar_level_row = [self.selectDic valueForKey:[self.selectArray objectAtIndex:1]];
+    NSString *sugar_level =[self.sugarArray objectAtIndex:sugar_level_row.intValue];
+    
+    NSString *topping_row = [self.selectDic valueForKey:[self.selectArray objectAtIndex:2]];
+    NSString *topping =[self.toppingArray objectAtIndex:topping_row.intValue];
+    
+    Drink *drinkDetail = [[Drink alloc] init];
+    drinkDetail.ice_level = ice_level;
+    drinkDetail.sugar_level = sugar_level;
+    drinkDetail.tea_name = self.tea_name;
+    
+    if(topping_row.intValue == 0){
+        drinkDetail.price = 1.2;
+    }else{
+        drinkDetail.price = 1.7;
+        drinkDetail.topping = topping;
+    }
+    
+    if(self.orderArray == nil){
+        self.orderArray = [NSMutableArray array];
+    }
+    [self.orderArray addObject:drinkDetail];
+    
     //UIAlertController风格：UIAlertControllerStyleAlert
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"是否还要其他的饮料"
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Do you want other drinks?"
                                                                              message:nil
                                                                       preferredStyle:UIAlertControllerStyleAlert];
     
     //添加取消到UIAlertController中
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        NSString *ice_level_row = [self.selectDic valueForKey:[self.selectArray objectAtIndex:0]];
-        NSString *ice_level = [self.iceArray objectAtIndex:ice_level_row.intValue];
-        
-        NSString *sugar_level_row = [self.selectDic valueForKey:[self.selectArray objectAtIndex:1]];
-        NSString *sugar_level =[self.sugarArray objectAtIndex:sugar_level_row.intValue];
-        
-        NSString *topping_row = [self.selectDic valueForKey:[self.selectArray objectAtIndex:2]];
-        NSString *topping =[self.toppingArray objectAtIndex:topping_row.intValue];
-        
-        Drink *drinkDetail = [[Drink alloc] init];
-        drinkDetail.ice_level = ice_level;
-        drinkDetail.sugar_level = sugar_level;
-        drinkDetail.tea_name = self.tea_name;
-        
-        if(topping_row.intValue == 0){
-            drinkDetail.price = 1.2;
-        }else{
-            drinkDetail.price = 1.7;
-            drinkDetail.topping = topping;
-        }        
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"No" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         ConfirmOrderVController *svc = [[ConfirmOrderVController alloc] init];
-        svc.drinkDetail = drinkDetail;
+        svc.drinkArray = self.orderArray;
         [self.navigationController pushViewController:svc animated:YES];
-        
     }];
     [alertController addAction:cancelAction];
     
     //添加确定到UIAlertController中
-    UIAlertAction *OKAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *OKAction = [UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
 //        NSLog(@"点击了完成按钮");
         HomeViewController *svc = [[HomeViewController alloc] init];
         svc.isSecondIncome = YES;
+        svc.orderArray = self.orderArray;
         [self.navigationController pushViewController:svc animated:YES];
     }];
     [alertController addAction:OKAction];

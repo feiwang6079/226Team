@@ -10,6 +10,8 @@
 		9E0BD1767AB924A85B844B3D /* libPods-Cafe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71814E1A1C09D8463949F4F3 /* libPods-Cafe.a */; };
 		E97F1F49227A53F9005A083F /* Drink.m in Sources */ = {isa = PBXBuildFile; fileRef = E97F1F48227A53F9005A083F /* Drink.m */; };
 		E97F1F4C227A667B005A083F /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = E97F1F4B227A667B005A083F /* Order.m */; };
+		E97F1F53227A9EE1005A083F /* OtherTeaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E97F1F51227A9EE1005A083F /* OtherTeaViewController.m */; };
+		E97F1F54227A9EE1005A083F /* OtherTeaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E97F1F52227A9EE1005A083F /* OtherTeaViewController.xib */; };
 		E985FBA92243012800AC206E /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E985FBA82243012800AC206E /* NetworkManager.m */; };
 		E9A5ADAA2267DF85008F7214 /* ServerResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A5ADA92267DF85008F7214 /* ServerResult.m */; };
 		E9A5ADAD2267EFD4008F7214 /* Customer.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A5ADAC2267EFD4008F7214 /* Customer.m */; };
@@ -82,6 +84,9 @@
 		E97F1F48227A53F9005A083F /* Drink.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Drink.m; sourceTree = "<group>"; };
 		E97F1F4A227A667B005A083F /* Order.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Order.h; sourceTree = "<group>"; };
 		E97F1F4B227A667B005A083F /* Order.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Order.m; sourceTree = "<group>"; };
+		E97F1F50227A9EE1005A083F /* OtherTeaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtherTeaViewController.h; sourceTree = "<group>"; };
+		E97F1F51227A9EE1005A083F /* OtherTeaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OtherTeaViewController.m; sourceTree = "<group>"; };
+		E97F1F52227A9EE1005A083F /* OtherTeaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtherTeaViewController.xib; sourceTree = "<group>"; };
 		E985FBA72243012800AC206E /* NetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
 		E985FBA82243012800AC206E /* NetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 		E9A5ADA82267DF85008F7214 /* ServerResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServerResult.h; sourceTree = "<group>"; };
@@ -379,6 +384,9 @@
 				E9FE770B223C7BA200E82488 /* AddressCell.h */,
 				E9FE770C223C7BA200E82488 /* AddressCell.m */,
 				E9FE770D223C7BA200E82488 /* AddressCell.xib */,
+				E97F1F50227A9EE1005A083F /* OtherTeaViewController.h */,
+				E97F1F51227A9EE1005A083F /* OtherTeaViewController.m */,
+				E97F1F52227A9EE1005A083F /* OtherTeaViewController.xib */,
 			);
 			path = Drinks;
 			sourceTree = "<group>";
@@ -471,6 +479,7 @@
 				E9FE7711223C7DCD00E82488 /* info.jpg in Resources */,
 				E9A5ADBE226812B8008F7214 /* tea4.jpg in Resources */,
 				E9F6C6F92230B59100F78CF3 /* drink@2x.png in Resources */,
+				E97F1F54227A9EE1005A083F /* OtherTeaViewController.xib in Resources */,
 				E9F6C6FF2230BFD300F78CF3 /* icon_homepage_map_selected_old.png in Resources */,
 				E9BE7C5E221E3681007DA83B /* icon_tabbar_mine_selected@2x.png in Resources */,
 				E9BE7C60221E3681007DA83B /* icon_tabbar_onsite@2x.png in Resources */,
@@ -571,6 +580,7 @@
 				E9FE770E223C7BA200E82488 /* AddressCell.m in Sources */,
 				E9FE771B223C806800E82488 /* OrderCell.m in Sources */,
 				E97F1F49227A53F9005A083F /* Drink.m in Sources */,
+				E97F1F53227A9EE1005A083F /* OtherTeaViewController.m in Sources */,
 				E9BE7C83221E7066007DA83B /* HomeViewController.m in Sources */,
 				E985FBA92243012800AC206E /* NetworkManager.m in Sources */,
 				E9BE7C47221E2C03007DA83B /* LoginViewController.m in Sources */,

@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(assign, nonatomic) Boolean isSecondIncome;
 
+@property(strong, nonatomic) NSMutableArray *orderArray;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -104,6 +104,8 @@
     SelectViewController *svc = [[SelectViewController alloc] init];
     Tea *t = [self.drinkArray objectAtIndex:indexPath.row];
     svc.tea_name = t.tea_name;
+    if(self.orderArray != nil)
+        svc.orderArray = self.orderArray;
     [self.navigationController pushViewController:svc animated:YES];
     [tableView deselectRowAtIndexPath:indexPath animated:FALSE];
 }

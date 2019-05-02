@@ -28,7 +28,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.drinkArray = [NSArray arrayWithObjects:self.drinkDetail, nil];
     self.title = @"Order Detail";
     
     for(int i = 0; i < self.drinkArray.count; i++){

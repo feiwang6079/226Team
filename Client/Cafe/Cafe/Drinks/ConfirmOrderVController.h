@@ -13,9 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ConfirmOrderVController : UIViewController
 
-@property(strong, nonatomic)NSArray *drinkArray;
-
-@property(strong, nonatomic)Drink *drinkDetail;
+@property(strong, nonatomic)NSMutableArray *drinkArray;
 
 @end
 
