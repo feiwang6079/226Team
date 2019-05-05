@@ -1,7 +1,9 @@
 package com.cmpe226.cafe;
 
 import com.cmpe226.cafe.models.Drink;
+import com.cmpe226.cafe.models.EmpOrder;
 import com.cmpe226.cafe.models.Orders;
+import com.cmpe226.cafe.services.EmpService;
 import com.cmpe226.cafe.services.TeaService;
 import com.cmpe226.cafe.services.OrderService;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -21,7 +23,13 @@ public class OrdersTest {
     private OrderService orderService;
     @Autowired
     private TeaService teaService;
+    @Autowired
+    private EmpService empService;
     @Test
+    public void testEmp(){
+       List<EmpOrder> empOrders =  empService.getEmpOrder("emp_01");
+       System.out.println("123");
+    }
     /*
     public void saveOrder(){
 
@@ -58,10 +66,13 @@ public class OrdersTest {
 
         orderService.save(orders);
     }
-    */
+
 
     public void pay(){
         orderService.pay(4);
     }
+
+
+     */
 
 }
