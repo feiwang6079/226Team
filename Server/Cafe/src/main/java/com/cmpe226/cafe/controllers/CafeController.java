@@ -1,5 +1,6 @@
 package com.cmpe226.cafe.controllers;
 
+import com.alibaba.fastjson.JSON;
 import com.cmpe226.cafe.models.Cafe;
 import com.cmpe226.cafe.models.Message;
 import com.cmpe226.cafe.repositories.CafeRowMapper;
@@ -20,14 +21,6 @@ public class CafeController {
     public Message customer(){
         List<Cafe> cafes = cafeRowMapper.findAllCafe();
 
-        String data;
-        ObjectMapper mapper = new ObjectMapper();
-        try {
-            data = mapper.writeValueAsString(cafes);
-        } catch (Exception e) {
-            data = "";
-        }
-
-        return new Message(200, "Success", data);
+        return new Message(200, "Success", JSON.toJSONString(cafes));
     }
 }

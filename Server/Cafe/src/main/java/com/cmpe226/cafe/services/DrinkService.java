@@ -6,6 +6,8 @@ import com.cmpe226.cafe.repositories.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class DrinkService {
     @Autowired
@@ -13,8 +15,14 @@ public class DrinkService {
     @Autowired
     OrderRepository orderRepository;
 
-    public Drink save(Drink drink){
-        return  drinkRepository.save(drink);
+    public int save(Drink drink){
+        return drinkRepository.insertDrink(drink.getIce_level(), drink.getSugar_level(), drink.getTopping(),
+                                            drink.getPrice(), drink.getEmp_id(), drink.getTea_name(),
+                                            drink.getOrder_id());
+    }
+
+    public List<Drink> getDrinks(Long orderId){
+        return drinkRepository.getDrinks(orderId);
     }
 
     public Drink update(Drink drink){

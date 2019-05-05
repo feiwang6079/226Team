@@ -41,7 +41,7 @@
     
     [SVProgressHUD showWithStatus:@"Please wait"];
 
-    [[NetworkManager sharedNetworkManager] postWithUrlString:[NSString stringWithFormat:@"%@getmoney",URL] parameters:dic success:^(id response){
+    [[NetworkManager sharedNetworkManager] getWithUrlString:[NSString stringWithFormat:@"%@getmoney",URL] parameters:dic success:^(id response){
         ServerResult *result = [ServerResult yy_modelWithDictionary:response];
         if(result.code != 200){
             [SVProgressHUD showErrorWithStatus:result.message];

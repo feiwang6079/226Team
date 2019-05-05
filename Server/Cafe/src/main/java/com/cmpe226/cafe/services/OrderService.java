@@ -1,5 +1,6 @@
 package com.cmpe226.cafe.services;
 
+import com.cmpe226.cafe.models.ClientOrders;
 import com.cmpe226.cafe.models.Orders;
 import com.cmpe226.cafe.repositories.CustomerRepository;
 import com.cmpe226.cafe.models.Payment;
@@ -47,11 +48,16 @@ public class OrderService {
         return paymentRepository.save(payment);
         }
 
-    public Orders save(Orders orders){
-       return  orderRepository.save(orders);
+    public int save(ClientOrders orders){
+       return orderRepository.insertOrders(orders.getOrder_id(), orders.getTotal_price(), orders.getStatus(), orders.getT(),
+                                            orders.getCus_id(), orders.getRe_id());
     }
 
     public Orders update(Orders orders){
         return orderRepository.save(orders);
+    }
+
+    public long getOrderCount(){
+        return orderRepository.getOrderCount();
     }
 }

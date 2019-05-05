@@ -1,5 +1,6 @@
 package com.cmpe226.cafe.controllers;
 
+import com.alibaba.fastjson.JSON;
 import com.cmpe226.cafe.models.Message;
 import com.cmpe226.cafe.models.Sugar;
 import com.cmpe226.cafe.repositories.SugarRowMapper;
@@ -21,14 +22,6 @@ public class SugarController {
 
         List<Sugar> sugars = sugarRowMapper.findAllSugar();
 
-        String data;
-        ObjectMapper mapper = new ObjectMapper();
-        try {
-            data = mapper.writeValueAsString(sugars);
-        } catch (Exception e) {
-            data = "";
-        }
-
-        return new Message(200, "Success", data);
+        return new Message(200, "Success", JSON.toJSONString(sugars));
     }
 }

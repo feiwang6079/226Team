@@ -1,5 +1,6 @@
 package com.cmpe226.cafe.controllers;
 
+import com.alibaba.fastjson.JSON;
 import com.cmpe226.cafe.models.Ice;
 import com.cmpe226.cafe.models.Message;
 import com.cmpe226.cafe.repositories.IceRowMapper;
@@ -19,15 +20,6 @@ public class IceController {
     public Message listAllIce(){
 
         List<Ice> ices = iceRowMapper.findAllIce();
-        String data;
-        ObjectMapper mapper = new ObjectMapper();
-
-        try{
-            data = mapper.writeValueAsString(ices);
-        }catch (Exception e){
-            data = "";
-        }
-
-        return new Message(200, "Success", data);
+        return new Message(200, "Success", JSON.toJSONString(ices));
     }
 }

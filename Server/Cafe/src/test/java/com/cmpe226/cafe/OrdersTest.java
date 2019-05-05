@@ -22,6 +22,7 @@ public class OrdersTest {
     @Autowired
     private TeaService teaService;
     @Test
+    /*
     public void saveOrder(){
 
         Orders orders = new Orders();
@@ -57,6 +58,7 @@ public class OrdersTest {
 
         orderService.save(orders);
     }
+    */
 
     public void pay(){
         orderService.pay(4);

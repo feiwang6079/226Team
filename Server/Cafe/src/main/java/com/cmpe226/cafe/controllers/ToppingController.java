@@ -1,5 +1,6 @@
 package com.cmpe226.cafe.controllers;
 
+import com.alibaba.fastjson.JSON;
 import com.cmpe226.cafe.models.Message;
 import com.cmpe226.cafe.models.Topping;
 import com.cmpe226.cafe.repositories.ToppingRowMapper;
@@ -20,14 +21,6 @@ public class ToppingController {
     public Message listAllToppings() {
         List<Topping> result = toppingRowMapper.findAllTps();
 
-        String data;
-        ObjectMapper mapper = new ObjectMapper();
-        try {
-            data = mapper.writeValueAsString(result);
-        } catch (Exception e) {
-            data = "";
-        }
-
-        return new Message(200, "Success", data);
+        return new Message(200, "Success", JSON.toJSONString(result));
     }
 }

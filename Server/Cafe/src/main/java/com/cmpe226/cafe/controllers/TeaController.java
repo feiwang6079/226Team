@@ -1,5 +1,6 @@
 package com.cmpe226.cafe.controllers;
 
+import com.alibaba.fastjson.JSON;
 import com.cmpe226.cafe.models.Message;
 import com.cmpe226.cafe.models.Tea;
 import com.cmpe226.cafe.repositories.TeaRowMapper;
@@ -17,16 +18,8 @@ public class TeaController {
 
     @GetMapping("/teas")
     public Message listAllTea(){
-
         List<Tea> teas = teaRowMapper.findAllTea();
-        String data;
-        ObjectMapper mapper = new ObjectMapper();
-        try {
-            data = mapper.writeValueAsString(teas);
-        } catch (Exception e) {
-            data = "";
-        }
-        return new Message(200, "Success", data);
+        return new Message(200, "Success", JSON.toJSONString(teas));
     }
 
 }

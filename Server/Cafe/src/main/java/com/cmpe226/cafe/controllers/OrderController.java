@@ -1,11 +1,15 @@
 package com.cmpe226.cafe.controllers;
 
+import com.alibaba.fastjson.JSON;
+import com.cmpe226.cafe.models.ClientOrders;
 import com.cmpe226.cafe.models.Drink;
 import com.cmpe226.cafe.models.Message;
 import com.cmpe226.cafe.models.Orders;
+import com.cmpe226.cafe.services.DrinkService;
 import com.cmpe226.cafe.services.OrderService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -15,29 +19,38 @@ public class OrderController {
     @Autowired
     OrderService orderService;
 
+    @Autowired
+    DrinkService drinkService;
+
     @PostMapping("/orders")
     public Message createOrder(
-                               @RequestBody Orders orders
+                               @RequestBody ClientOrders orders
                                ) {
-
-        List<Drink> drinks = orders.getDrinks();
-        for (Drink drink : drinks) {
-            drink.saveOrders(orders);
-            drink.setEmp_id(getEmployID());
+        try{
+            Boolean n = insertOrder(orders);
+        }catch (Exception e){
+            return new Message(400, "Insert Error", "");
         }
+        return new Message(200, "Success", JSON.toJSONString(orders));
+    }
+
+    @Transactional
+    public Boolean insertOrder(ClientOrders orders) throws Exception{
 
         orders.setStatus("unpaid");
-        orders = orderService.save(orders);
 
-        ObjectMapper mapper = new ObjectMapper();
-        String data = "";
-        try {
-            data = mapper.writeValueAsString(orders);
-        } catch (Exception e) {
-            data = "";
+        long num = orderService.getOrderCount();
+        orders.setOrder_id(num + 1);
+
+        int isSuccess = orderService.save(orders);
+        List<Drink> drinks = orders.getDrinks();
+        for (Drink drink : drinks) {
+            drink.setOrder_id(num + 1);
+            drink.setEmp_id(getEmployID());
+            drinkService.save(drink);
         }
 
-        return new Message(200, "Success", data);
+        return true;
     }
 
     private String getEmployID(){
@@ -47,16 +60,9 @@ public class OrderController {
     @GetMapping("/getorders")
     public Message listUserOrders(@RequestParam long cus_id){
         List<Orders> orders = orderService.reviewMyOrders(cus_id);
-
-        ObjectMapper mapper = new ObjectMapper();
-        String data = "";
-        try{
-            data = mapper.writeValueAsString(orders);
-        }catch (Exception e){
-            e.printStackTrace();
-            data = "";
+        for(Orders order : orders){
+            List<Drink> drinks = drinkService.getDrinks(order.getOrder_id());
         }
-
-        return new Message(200, "Success", data);
+        return new Message(200, "Success", JSON.toJSONString(orders));
     }
 }

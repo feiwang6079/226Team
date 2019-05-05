@@ -17,20 +17,22 @@ public class Drink {
     private String tea_name;
     private String topping;
 
-    @ManyToOne
-    @JoinColumn(name = "order_id")
-    private Orders orders;
+    private long order_id;
+//    @ManyToOne
+//    @JoinColumn(name = "order_id")
+//    private Orders orders;
 ////constructors
     public Drink(){}
 
     public Drink(String ice_level, String sugar,
-                 double price, String emp_id, String tea_name, String topping){
+                 double price, String emp_id, String tea_name, String topping, long order_id){
         this.ice_level = ice_level;
         this.sugar_level = sugar;
         this.price = price;
         this.emp_id = emp_id;
         this.tea_name = tea_name;
         this.topping = topping;
+        this.order_id = order_id;
     }
 
 //getters
@@ -96,7 +98,15 @@ public class Drink {
         this.topping = top;
     }
 
-    public void saveOrders(Orders orders) {
-        this.orders = orders;
+//    public void saveOrders(Orders orders) {
+//        this.orders = orders;
+//    }
+
+    public long getOrder_id() {
+        return order_id;
+    }
+
+    public void setOrder_id(long order_id) {
+        this.order_id = order_id;
     }
 }

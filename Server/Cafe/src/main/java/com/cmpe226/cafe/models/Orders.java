@@ -21,8 +21,8 @@ public class Orders {
     private long cus_id;
     private String re_id;
 
-    @OneToMany(mappedBy = "orders", cascade = {CascadeType.ALL})
-    private List<Drink> drinks;
+//    @OneToMany(mappedBy = "orders", cascade = {CascadeType.ALL})
+//    private List<Drink> drinks;
 
 
 //constructors
@@ -95,15 +95,19 @@ public class Orders {
         this.re_id = re_id;
     }
 
-    public void saveDrinks(List<Drink> drinks) {
+/*    public void saveDrinks(List<Drink> drinks) {
         this.drinks = drinks;
     }
 
-    public List<Drink> getDrinks() {
-        return drinks;
-    }
+    */
 
-    public void setDrinks(List<Drink> drinks) {
-        this.drinks = drinks;
-    }
+//    public List<Drink> getDrinks() {
+//        return drinks;
+//    }
+//
+//    public void setDrinks(List<Drink> drinks) {
+//        this.drinks = drinks;
+//    }
+
+
 }

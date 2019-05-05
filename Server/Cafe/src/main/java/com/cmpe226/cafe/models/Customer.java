@@ -27,16 +27,6 @@ public class Customer {
         this.cus_id = cus_id;
     }
 
-    @Override
-    public String toString() {
-        ObjectMapper mapper = new ObjectMapper();
-        try {
-            return mapper.writeValueAsString(this);
-        } catch (Exception e) {
-            return "";
-        }
-    }
-
     public long getCus_id() {
         return cus_id;
     }
