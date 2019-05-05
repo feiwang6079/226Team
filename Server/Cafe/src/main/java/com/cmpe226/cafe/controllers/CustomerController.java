@@ -3,6 +3,7 @@ package com.cmpe226.cafe.controllers;
 import com.alibaba.fastjson.JSON;
 import com.cmpe226.cafe.models.Orders;
 import com.cmpe226.cafe.models.Payment;
+import com.cmpe226.cafe.repositories.CustomerRepository;
 import com.cmpe226.cafe.services.CustomerService;
 import com.cmpe226.cafe.models.Customer;
 import com.cmpe226.cafe.models.Message;
@@ -24,6 +25,10 @@ public class CustomerController {
 
     @Autowired
     PaymentService paymentService;
+
+
+//    @Autowired
+//    CustomerRepository customerRepository;
 
     @GetMapping("/login")
     public Message review(@RequestParam long cus_id, @RequestParam String password){
@@ -54,11 +59,11 @@ public class CustomerController {
     public Message pay(@RequestParam long cus_id,
                          @RequestParam long order_id) throws Exception{
 
-        try{
-            Boolean isSuccess = payOrder(cus_id, order_id);
+        String message = customerService.payOrder(cus_id, order_id);
+        if (message.equals("")) {
             return new Message(200, "Success", "");
-        }catch (Exception e){
-            return new Message(400, "No enough balance", "");
+        } else {
+            return new Message(400, message, "");
         }
     }
 

@@ -2,10 +2,18 @@ package com.cmpe226.cafe.models;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@NamedStoredProcedureQuery(
+        name = "PAY",
+        procedureName = "PAY",
+        parameters = {
+                @StoredProcedureParameter(name = "my_cus_id", mode = ParameterMode.IN, type = Long.class),
+                @StoredProcedureParameter(name = "my_order_id", mode = ParameterMode.IN, type = Long.class),
+                @StoredProcedureParameter(name = "message", mode = ParameterMode.OUT, type = String.class),
+        }
+)
 public class Customer {
     @Id
     private long cus_id;

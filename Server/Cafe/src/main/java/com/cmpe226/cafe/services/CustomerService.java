@@ -3,6 +3,8 @@ package com.cmpe226.cafe.services;
 import com.cmpe226.cafe.models.Customer;
 import com.cmpe226.cafe.repositories.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.query.Procedure;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -28,5 +30,9 @@ public class CustomerService {
 
     public double getAccountBalance(long cus_id){
         return customerRepository.getAccountBalance(cus_id);
+    }
+
+    public String payOrder(Long cur_cus_id, Long cur_order_id) {
+        return customerRepository.payOrder(cur_cus_id, cur_order_id);
     }
 }
