@@ -34,3 +34,8 @@ insert into orders values('11', 15, 'paid', '2008-01-01 00:00:01', '1203456789',
 insert into orders values('12', 10.2, 'unpaid', '2009-01-01 00:00:01','1203456789', 'cafe_01');
 
 select * from payment;
+
+//create view
+CREATE VIEW emp_order AS SELECT emp_id, tea_name, drink.order_id, cus_id, status 
+FROM drink, orders 
+where drink.order_id = orders.order_id;
