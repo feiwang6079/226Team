@@ -14,6 +14,15 @@ public class ClientOrders {
 
     private List<Drink> drinks;
 
+    public ClientOrders(Orders order){
+        this.total_price = order.getTotal_price();
+        this.status = order.getStatus();
+        this.order_id = order.getOrder_id();
+        this.t = order.getT();
+        this.cus_id = order.getCus_id();
+        this.re_id = order.getRe_id();
+    }
+
     public ClientOrders(long order_id, double total_price, String status, Time t, long cus_id, String re_id) {
         this.total_price = total_price;
         this.status = status;

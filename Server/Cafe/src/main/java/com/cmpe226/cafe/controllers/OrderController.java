@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -60,9 +61,13 @@ public class OrderController {
     @GetMapping("/getorders")
     public Message listUserOrders(@RequestParam long cus_id){
         List<Orders> orders = orderService.reviewMyOrders(cus_id);
+        List<ClientOrders> clientOrders = new ArrayList<ClientOrders>();
         for(Orders order : orders){
             List<Drink> drinks = drinkService.getDrinks(order.getOrder_id());
+            ClientOrders newOrder = new ClientOrders(order);
+            newOrder.setDrinks(drinks);
+            clientOrders.add(newOrder);
         }
-        return new Message(200, "Success", JSON.toJSONString(orders));
+        return new Message(200, "Success", JSON.toJSONString(clientOrders));
     }
 }
