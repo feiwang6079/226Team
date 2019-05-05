@@ -64,22 +64,32 @@ BEGIN
     DECLARE CONTINUE HANDLER FOR SQLEXCEPTION SET 	`_rollback` = 1;
     START TRANSACTION;
     
+    SET @my_total_price = NULL;
 	SELECT total_price INTO @my_total_price
 		FROM orders
 		WHERE order_id = my_order_id;
 	
+    SET @my_account_balance = NULL;
 	SELECT account_balance INTO @my_account_balance
 		FROM customer
 		WHERE cus_id = my_cus_id;
 	
-    set @my_orders_order_id = null;
+    SET @my_orders_order_id = NULL;
 	SELECT orders_order_id INTO @my_orders_order_id
 		FROM payment
 		WHERE orders_order_id = my_order_id;
         
+	
+    
     IF @my_orders_order_id IS NOT NULL THEN
-        SET message= @my_orders_order_id;
 		SET message= "Order is paid";
+        
+	ELSEIF @my_total_price IS NULL THEN
+		SET message= "Invalid order id";
+        
+    ELSEIF @my_account_balance IS NULL THEN
+		SET message= "Invalid customer id";
+        
     ELSEIF @my_account_balance >= @my_total_price THEN
 		UPDATE customer
 			SET account_balance = account_balance - @my_total_price
