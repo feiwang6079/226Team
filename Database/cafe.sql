@@ -34,8 +34,8 @@ insert into employee values('emp_01', 'Wen Li', 'F', 'SJSU');
 insert into customer values('12345', 234, 423.2, '827ccb0eea8a706c4c34a16891f84e7b');
 insert into customer values('1203456789', 234, 423.2, '827ccb0eea8a706c4c34a16891f84e7b');
 
-create table payment ( payment_id  int NOT NULL auto_increment, orders_order_id long, primary key(payment_id));
-
+create table payment ( payment_id  int NOT NULL auto_increment, orders_order_id int, primary key(payment_id),
+foreign key  (orders_order_id) REFERENCES orders(order_id) ON delete CASCADE);
 insert into orders values('1', 15, 'paid', '2008-01-01 00:00:01', '1203456789', 'cafe_01');
 insert into orders values('2', 10.2, 'unpaid', '2009-01-01 00:00:01','1203456789', 'cafe_01');
 insert into drink values(1, '30', '50', 'boba', 50.00, 'emp_01', 'Oolong', '1');
@@ -55,6 +55,9 @@ CREATE VIEW emp_order AS SELECT emp_id, tea_name, drink.order_id, cus_id, status
 FROM drink, orders
 where drink.order_id = orders.order_id;
 
+CREATE VIEW emp_order_paid_emp_01 AS SELECT emp_id, tea_name, drink.order_id, cus_id, status 
+FROM drink, orders 
+where drink.order_id = orders.order_id and status = 'paid' and emp_id = 'emp_01';
 
 
 DROP PROCEDURE IF EXISTS PAY;
