@@ -1,4 +1,5 @@
-//
+//  SJSU CMPE 226 Spring 2019 TEAM One.
+
 //  ServerResult.h
 //  Cafe
 //
