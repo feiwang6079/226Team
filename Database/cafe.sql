@@ -1,3 +1,4 @@
+-- SJSU CMPE 226 Spring 2019 TEAM1
 drop database if exists cafe;
 create database cafe;
 use cafe;
@@ -50,7 +51,7 @@ insert into tea values('peach white', 1.2);
 
 
 
---create view
+-- Create View
 CREATE VIEW emp_order AS SELECT emp_id, tea_name, drink.order_id, cus_id, status
 FROM drink, orders
 where drink.order_id = orders.order_id;
@@ -60,6 +61,7 @@ FROM drink, orders
 where drink.order_id = orders.order_id and status = 'paid' and emp_id = 'emp_01';
 
 
+-- Stored Procedure
 DROP PROCEDURE IF EXISTS PAY;
 DELIMITER $$
 CREATE PROCEDURE PAY(in my_cus_id int, in my_order_id int, out message varchar(30))

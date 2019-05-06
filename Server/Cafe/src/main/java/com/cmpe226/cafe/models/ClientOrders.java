@@ -1,3 +1,4 @@
+// SJSU CMPE 226 Spring 2019 TEAM1
 package com.cmpe226.cafe.models;
 
 import java.sql.Time;
