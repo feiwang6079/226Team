@@ -4,7 +4,7 @@ server:
 #   context-path: /api
 logging:
   level:
-    root: info
+    root: error
     com.cmpe226.cafe: debug
   file: logs/debug.log
 spring:

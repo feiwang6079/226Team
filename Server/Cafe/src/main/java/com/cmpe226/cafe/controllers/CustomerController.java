@@ -9,6 +9,8 @@ import com.cmpe226.cafe.models.Customer;
 import com.cmpe226.cafe.models.Message;
 import com.cmpe226.cafe.services.OrderService;
 import com.cmpe226.cafe.services.PaymentService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
@@ -30,15 +32,21 @@ public class CustomerController {
 //    @Autowired
 //    CustomerRepository customerRepository;
 
+    private static Logger logger = LoggerFactory.getLogger(CustomerController.class);
+
+
     @GetMapping("/login")
     public Message review(@RequestParam long cus_id, @RequestParam String password){
         Customer c =  customerService.review(cus_id);
 
         if (c == null) {
+            logger.info("user:" + cus_id + " login fail " + "User not found");
             return new Message(401, "User not found", "");
         } else if(c.getPassword().toLowerCase().equals(password.toLowerCase())) {
+            logger.info("user:" + cus_id + "login success ");
             return new Message(200, "Success", JSON.toJSONString(c));
         } else {
+            logger.info("user:" + cus_id + " login fail " + "Wrong password");
             return new Message(402, "Wrong password", "");
         }
     }
@@ -49,8 +57,10 @@ public class CustomerController {
 
         int result = customerService.topUp(cus_id, value);
         if (result == 1) {
+            logger.info("user:" + cus_id + " Recharge successful");
             return new Message(200, "Success", "");
         } else {
+            logger.info("user:" + cus_id + " Recharge failed");
             return new Message(400, "Failed", "");
         }
     }
@@ -60,9 +70,11 @@ public class CustomerController {
                          @RequestParam long order_id) throws Exception{
 
         String message = customerService.payOrder(cus_id, order_id);
-        if (message.equals("")) {
+        if (message.equals("Succeed!")) {
+            logger.info("user:" + cus_id + " payment successful");
             return new Message(200, "Success", "");
         } else {
+            logger.info("user:" + cus_id + " payment failed " + "message");
             return new Message(400, message, "");
         }
     }
@@ -72,6 +84,7 @@ public class CustomerController {
         Customer customer = customerService.review(cus_id);
         Orders orders = orderService.getOrder(order_id);
         if (customer.getAccount_balance() < orders.getTotal_price()) {
+            logger.info("user:" + cus_id + " payment failed " + "reason: user has not enough money");
             throw new Exception("No enough balance - roll back");
         }
         customerService.payByBalance(cus_id, orders.getTotal_price());
